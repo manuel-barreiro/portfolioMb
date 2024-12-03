@@ -12,7 +12,7 @@ export const ES_DATA = {
       href: "https://www.nestle.com/",
       badges: [],
       location: "Remoto",
-      title: "Software Engineer | Front End Specialist",
+      title: "Software Engineer",
       logoUrl: "/nestle.png",
       start: "jun 2024",
       end: "presente",
@@ -44,7 +44,7 @@ export const ES_DATA = {
         "Asistí en el desarrollo e implementación de aplicaciones. Realicé revisiones de código y procesos de control de calidad. Generé documentación completa de sistemas de software.",
     },
     {
-      company: "Instituto de Energía - Universidad Austral",
+      company: "Instituto de Energía Austral",
       badges: [],
       href: "http://www.ieaustral.com/",
       location: "Presencial",
@@ -129,7 +129,7 @@ export const ES_DATA = {
         ],
         image: "",
         video:
-          "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+          "https://asset.cloudinary.com/dauymdvtt/2ab49c9d36995e7655a6e8faae306652",
       },
       {
         title: "Magic UI",

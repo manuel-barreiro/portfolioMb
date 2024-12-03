@@ -12,7 +12,7 @@ export const EN_DATA = {
       href: "https://www.nestle.com/",
       badges: [],
       location: "Remote",
-      title: "Software Engineer | Front End Specialist",
+      title: "Software Engineer",
       logoUrl: "/nestle.png",
       start: "jun 2024",
       end: "present",
@@ -44,7 +44,7 @@ export const EN_DATA = {
         "Assisted in application development and implementation. Conducted code reviews and quality assurance processes. Generated comprehensive software system documentation.",
     },
     {
-      company: "Instituto de Energía - Universidad Austral",
+      company: "Instituto de Energía Austral",
       badges: [],
       href: "http://www.ieaustral.com/",
       location: "On-Site",
