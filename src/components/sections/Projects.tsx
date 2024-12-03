@@ -18,7 +18,7 @@ export default function Projects({ blurFadeDelay }: { blurFadeDelay: number }) {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 {t("projects.heading")}
               </h2>
-              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="text-sm text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 {t("projects.description")}
               </p>
             </div>

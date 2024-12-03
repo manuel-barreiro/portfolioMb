@@ -15,7 +15,9 @@ export default function Education({
     <section id="education">
       <div className="flex min-h-0 flex-col gap-y-3">
         <BlurFade delay={blurFadeDelay * 7}>
-          <h2 className="text-xl font-bold">{t("sectionTitles.education")}</h2>
+          <h2 className="text-md font-bold sm:text-xl">
+            {t("sectionTitles.education")}
+          </h2>
         </BlurFade>
         {educationEntries.map((education, id) => (
           <BlurFade

@@ -13,9 +13,9 @@ export default {
   },
   greeting: "Hi, I'm",
   description:
-    "Industrial Engineer who codes. Crafting tech solutions for real-world challenges :)",
+    "Industrial Engineer × Software Developer. Creating practical tech solutions for tangible problems :)",
   summary:
-    "With a background in **Industrial Engineering** and focus on *Business Intelligence*, I've successfully transitioned into software development. During university, I specialized in **data-driven decision making** and worked as a *Data Engineer*. My journey with data programming sparked a **natural passion for software development**, leading me to work as a *Software Engineer* at **Nestlé IT** as a *Software Engineer*, while maintaining freelance projects in my spare time.",
+    "With a background in **Industrial Engineering** and focus on *Business Intelligence*, I've successfully transitioned into software development. During university, I specialized in **data-driven decision making** and worked as a *Data Engineer*. My journey with data programming sparked a **natural passion for software development**, leading me to work as a *Software Engineer* at **Nestlé IT**, while maintaining freelance projects in my spare time.",
   work: [
     {
       company: "Nestlé",
@@ -258,5 +258,9 @@ export default {
   skillsFilter: {
     other: "Other",
     databases: "Databases",
+  },
+  terminal: {
+    eng: "industial engineer",
+    whoCodes: "@who/codes",
   },
 } satisfies LanguageData

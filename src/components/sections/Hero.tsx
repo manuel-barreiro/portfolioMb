@@ -2,6 +2,7 @@ import BlurFade from "@/components/magicui/blur-fade"
 import BlurFadeText from "@/components/magicui/blur-fade-text"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useTranslations } from "next-intl"
+import CodeBlock from "../code-block"
 
 export default function Hero({ blurFadeDelay }: { blurFadeDelay: number }) {
   const t = useTranslations()
@@ -17,8 +18,9 @@ export default function Hero({ blurFadeDelay }: { blurFadeDelay: number }) {
               yOffset={8}
               text={`${t("greeting")} ${t("name").split(" ")[0]} 👋🏽`}
             />
+
             <BlurFadeText
-              className="prose max-w-[600px] text-pretty font-sans text-sm text-muted-foreground dark:prose-invert md:text-xl"
+              className="prose max-w-[600px] text-pretty font-sans text-sm text-muted-foreground dark:prose-invert sm:text-lg"
               delay={blurFadeDelay}
               text={t("description")}
             />

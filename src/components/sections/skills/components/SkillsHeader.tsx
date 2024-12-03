@@ -17,7 +17,7 @@ export default function SkillsHeader({
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
             {t("skills.heading")}
           </h2>
-          <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <p className="mx-auto max-w-[600px] text-sm text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             {t("skills.description")}
           </p>
         </div>

@@ -13,7 +13,7 @@ export default {
   },
   greeting: "Hola, soy",
   description:
-    "Ingeniero Industrial que programa. Creando soluciones tecnológicas para retos del mundo real :)",
+    "Ingeniero Industrial × Developer. Creando soluciones tecnológicas prácticas para problemas tangibles :)",
   summary:
     "Con formación en **Ingeniería Industrial** y enfoque en *Business Intelligence*, transicioné al desarrollo de software. Durante la universidad, me especialicé en la **toma de decisiones basada en datos** y trabajé como *Data Engineer*. Mi trayectoria con la programación orientada a datos despertó en mí una **pasión por el desarrollo de software**, llevándome a trabajar como *Developer* en **Nestlé IT**, mientras mantengo proyectos **freelance** en mi tiempo libre.",
   work: [
@@ -106,7 +106,8 @@ export default {
   ],
   skills: {
     heading: "Herramientas y Tecnologías",
-    description: "Estas son algunas de las tecnologías con las que trabajo.",
+    description:
+      "Estas son algunas de las tecnologías con las que tengo experiencia trabajando.",
   },
   projects: {
     heading: "Explora mis últimos trabajos",
@@ -257,5 +258,9 @@ export default {
   skillsFilter: {
     other: "Otras",
     databases: "DBs",
+  },
+  terminal: {
+    eng: "ingeniero industrial",
+    whoCodes: "@que/programa",
   },
 } satisfies LanguageData

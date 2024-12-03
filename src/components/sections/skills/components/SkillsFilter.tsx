@@ -60,8 +60,10 @@ export default function SkillsFilter({
         <div className="grid grid-cols-4 gap-2">
           <TabsTrigger value="frontend">Front End</TabsTrigger>
           <TabsTrigger value="backend">Back End</TabsTrigger>
-          <TabsTrigger value="other">{t("skillsFilter.databases")}</TabsTrigger>
-          <TabsTrigger value="database">{t("skillsFilter.other")}</TabsTrigger>
+          <TabsTrigger value="database">
+            {t("skillsFilter.databases")}
+          </TabsTrigger>
+          <TabsTrigger value="other">{t("skillsFilter.other")}</TabsTrigger>
         </div>
       </TabsList>
 

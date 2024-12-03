@@ -82,4 +82,8 @@ export type LanguageData = {
     other: string
     databases: string
   }
+  terminal: {
+    eng: string
+    whoCodes: string
+  }
 }

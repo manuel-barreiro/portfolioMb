@@ -11,7 +11,9 @@ export default function Work({ blurFadeDelay }: { blurFadeDelay: number }) {
     <section id="work">
       <div className="flex min-h-0 flex-col gap-y-3">
         <BlurFade delay={blurFadeDelay * 5}>
-          <h2 className="text-xl font-bold">{t("sectionTitles.work")}</h2>
+          <h2 className="text-md font-bold sm:text-xl">
+            {t("sectionTitles.work")}
+          </h2>
         </BlurFade>
         {workEntries.map((work, id) => (
           <BlurFade key={work.company} delay={blurFadeDelay * 6 + id * 0.05}>
