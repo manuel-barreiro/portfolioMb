@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero"
+import { useTranslations } from "next-intl"
 import About from "@/components/sections/About"
 import Work from "@/components/sections/Work"
 import Education from "@/components/sections/Education"

@@ -1,77 +1,86 @@
-import Navbar from "@/components/navbar"
 import { ThemeProvider } from "@/components/theme-provider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { cn } from "@/lib/utils"
-import { staticData } from "@/data/static"
 import type { Metadata } from "next"
 import { Inter as FontSans } from "next/font/google"
 import "./globals.css"
-import { LanguageProvider } from "@/contexts/LanguageContext"
+import Navbar from "@/components/navbar/navbar"
+import { NextIntlClientProvider } from "next-intl"
+import { getLocale, getMessages, getTranslations } from "next-intl/server"
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 })
 
-export const metadata: Metadata = {
-  metadataBase: new URL(staticData.url),
-  title: {
-    default: staticData.name,
-    template: `%s | ${staticData.name}`,
-  },
-  description:
-    "Ingeniero Industrial especializado en Business Intelligence y desarrollo de software. Data Engineer con experiencia en Nestlé IT y proyectos freelance. Apasionado por la tecnología y los datos.",
-  openGraph: {
-    title: `${staticData.name}`,
-    description:
-      "Ingeniero Industrial especializado en Business Intelligence y desarrollo de software. Data Engineer con experiencia en Nestlé IT y proyectos freelance. Apasionado por la tecnología y los datos.",
-    url: staticData.url,
-    siteName: `${staticData.name}`,
-    locale: "en_US",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations()
+  return {
+    metadataBase: new URL(t("url")),
+    title: {
+      default: t("name"),
+      template: `%s | ${t("name")}`,
+    },
+    description: t("description"),
+    openGraph: {
+      title: `${t("name")}`,
+      description: t("description"),
+      url: t("url"),
+      siteName: `${t("name")}`,
+      locale: "en_US",
+      type: "website",
+    },
+    robots: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
-  },
-  twitter: {
-    title: `${staticData.name}`,
-    card: "summary_large_image",
-  },
-  verification: {
-    google: "",
-    yandex: "",
-  },
+    twitter: {
+      title: `${t("name")}`,
+      card: "summary_large_image",
+    },
+    verification: {
+      google: "",
+      yandex: "",
+    },
+  }
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const locale = await getLocale()
+  const messages = await getMessages()
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={cn(
           "mx-auto min-h-screen max-w-2xl bg-background px-6 py-12 font-sans antialiased sm:py-24",
           fontSans.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
-          <TooltipProvider delayDuration={0}>
-            <LanguageProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <TooltipProvider delayDuration={0}>
               {children}
               <Navbar />
-            </LanguageProvider>
-          </TooltipProvider>
-        </ThemeProvider>
+            </TooltipProvider>
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

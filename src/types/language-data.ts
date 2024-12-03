@@ -1,24 +1,13 @@
+// types/language-data.ts
 import { IconProps } from "@/components/icons"
 
-type Link = {
+export type Link = {
   type: string
   href: string
-  icon: React.ReactElement<IconProps>
+  icon: "globe" | "github" // Icon types instead of JSX
 }
 
-type Project = {
-  title: string
-  href: string
-  dates: string
-  active: boolean
-  description: string
-  technologies: string[]
-  links: Link[]
-  image: string
-  video: string
-}
-
-type WorkExperience = {
+export interface WorkEntry {
   company: string
   href: string
   badges: string[]
@@ -26,11 +15,11 @@ type WorkExperience = {
   title: string
   logoUrl: string
   start: string
-  end: string
+  end?: string
   description: string
 }
 
-type Education = {
+export type EducationEntry = {
   school: string
   href: string
   degree: string
@@ -39,12 +28,34 @@ type Education = {
   end: string
 }
 
+export type ProjectEntry = {
+  title: string
+  href: string
+  dates: string
+  active: boolean
+  description: string
+  technologies: ReadonlyArray<string>
+  links: ReadonlyArray<Link>
+  image?: string
+  video?: string
+}
+
 export type LanguageData = {
+  name: string
+  initials: string
+  url: string
+  location: string
+  locationLink: string
+  avatarUrl: string
+  contactInfo: {
+    email: string
+    tel: string
+  }
   greeting: string
   description: string
   summary: string
-  work: WorkExperience[]
-  education: Education[]
+  work: WorkEntry[]
+  education: EducationEntry[]
   skills: {
     heading: string
     description: string
@@ -52,7 +63,7 @@ export type LanguageData = {
   projects: {
     heading: string
     description: string
-    recent: Project[]
+    recent: ProjectEntry[]
   }
   contact: {
     heading: string
@@ -66,5 +77,9 @@ export type LanguageData = {
     skills: string
     projects: string
     contact: string
+  }
+  skillsFilter: {
+    other: string
+    databases: string
   }
 }

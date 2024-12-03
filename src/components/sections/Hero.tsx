@@ -1,16 +1,10 @@
-"use client"
 import BlurFade from "@/components/magicui/blur-fade"
 import BlurFadeText from "@/components/magicui/blur-fade-text"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { useTranslation } from "@/hooks/useTranslation"
-import { staticData } from "@/data/static"
+import { useTranslations } from "next-intl"
 
 export default function Hero({ blurFadeDelay }: { blurFadeDelay: number }) {
-  const { t, isLoading } = useTranslation()
-
-  if (isLoading) {
-    return null
-  }
+  const t = useTranslations()
 
   return (
     <section id="hero">
@@ -21,18 +15,18 @@ export default function Hero({ blurFadeDelay }: { blurFadeDelay: number }) {
               delay={blurFadeDelay}
               className="text-2xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none"
               yOffset={8}
-              text={`${t.greeting} ${staticData.name.split(" ")[0]} 👋🏽`}
+              text={`${t("greeting")} ${t("name").split(" ")[0]} 👋🏽`}
             />
             <BlurFadeText
               className="prose max-w-[600px] text-pretty font-sans text-sm text-muted-foreground dark:prose-invert md:text-xl"
               delay={blurFadeDelay}
-              text={t.description}
+              text={t("description")}
             />
           </div>
           <BlurFade delay={blurFadeDelay}>
             <Avatar className="size-28 border">
-              <AvatarImage alt={staticData.name} src={staticData.avatarUrl} />
-              <AvatarFallback>{staticData.initials}</AvatarFallback>
+              <AvatarImage alt={t("name")} src={t("avatarUrl")} />
+              <AvatarFallback>{t("initials")}</AvatarFallback>
             </Avatar>
           </BlurFade>
         </div>

@@ -1,11 +1,21 @@
-import { Icons } from "@/components/icons"
+import { LanguageData } from "@/types/language-data"
 
-export const EN_DATA = {
+export default {
+  name: "Manuel Barreiro",
+  initials: "MB",
+  url: "https://mbarreiro.dev",
+  location: "Buenos Aires, Argentina",
+  locationLink: "https://www.google.com/maps/place/buenosaires",
+  avatarUrl: "/me.png",
+  contactInfo: {
+    email: "ing.mbarreiro@gmail.com",
+    tel: "+5491166726968",
+  },
   greeting: "Hi, I'm",
   description:
     "Industrial Engineer who codes. Crafting tech solutions for real-world challenges :)",
   summary:
-    "With a background in **Industrial Engineering** and focus on *Business Intelligence*, I've successfully transitioned into software development. During university, I specialized in **data-driven decision making** and worked as a *Data Engineer*. My journey with data programming sparked a **natural passion for software development**, leading me to work as a **Software Engineer at Nestlé IT** as a *Software Engineer*, while maintaining freelance projects in my spare time.",
+    "With a background in **Industrial Engineering** and focus on *Business Intelligence*, I've successfully transitioned into software development. During university, I specialized in **data-driven decision making** and worked as a *Data Engineer*. My journey with data programming sparked a **natural passion for software development**, leading me to work as a *Software Engineer* at **Nestlé IT** as a *Software Engineer*, while maintaining freelance projects in my spare time.",
   work: [
     {
       company: "Nestlé",
@@ -77,15 +87,14 @@ export const EN_DATA = {
       start: "2019",
       end: "2024",
     },
-    ,
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "/ib.png",
-      start: "",
-      end: "",
-    },
+    // {
+    //   school: "International Baccalaureate",
+    //   href: "https://ibo.org",
+    //   degree: "IB Diploma",
+    //   logoUrl: "/ib.png",
+    //   start: "",
+    //   end: "",
+    // },
     {
       school: "St. Matthew's College",
       href: "https://www.smc.edu.ar/",
@@ -114,7 +123,7 @@ export const EN_DATA = {
           "Development of landing page, payment system and booking system for pilates and yoga studio. Smooth scroll with Lenis library, animations with Framer Motion and responsive design. Developed with Next.js and TypeScript. Prisma ORM and PostgreSQL for the database.",
         technologies: [
           "Next.js",
-          "Typescript",
+          "TypeScript",
           "PostgreSQL",
           "Prisma",
           "TailwindCSS",
@@ -125,12 +134,12 @@ export const EN_DATA = {
           {
             type: "Website",
             href: "https://reformer.com.ar",
-            icon: <Icons.globe className="size-3" />,
+            icon: "globe",
           },
           {
             type: "Source",
             href: "https://github.com/manuel-barreiro/reformer",
-            icon: <Icons.github className="size-3" />,
+            icon: "github",
           },
         ],
         image: "",
@@ -144,17 +153,25 @@ export const EN_DATA = {
         active: true,
         description:
           "Design and development (Figma to code) of corporate landing page and product catalog. Developed using Next.js (App router), optimized by taking advantage of SSR (server side rendering).",
-        technologies: ["Next.js", "Javascript", "TailwindCSS", "Figma"],
+        technologies: [
+          "Next.js",
+          "Javascript",
+          "TailwindCSS",
+          "Figma",
+          "Framer Motion",
+          "Zod",
+          "React Hook Form",
+        ],
         links: [
           {
             type: "Website",
             href: "https://www.powerconsultant.com.ar/",
-            icon: <Icons.globe className="size-3" />,
+            icon: "globe",
           },
           {
             type: "Source",
             href: "https://github.com/manuel-barreiro/power_consultant",
-            icon: <Icons.github className="size-3" />,
+            icon: "github",
           },
         ],
         image: "",
@@ -166,18 +183,26 @@ export const EN_DATA = {
         dates: "",
         active: true,
         description:
-          "DevaluApp helps you calculate the appreciation/devaluation of your salary in ARS in relation to the value of the US dollar. It does this using the Bluelytics API. Developed using Next.js, with styles done through Tailwind CSS.",
-        technologies: ["Next.js", "Typescript", "TailwindCSS", "Shadcn UI"],
+          "DevaluApp helps you calculate the appreciation or devaluation of your salary in ARS in relation to the value of the US dollar. It does this using the Bluelytics API. Developed using Next.js, with styles done through Tailwind CSS.",
+        technologies: [
+          "Next.js",
+          "TypeScript",
+          "TailwindCSS",
+          "Shadcn UI",
+          "Framer Motion",
+          "Zod",
+          "React Hook Form",
+        ],
         links: [
           {
             type: "Website",
             href: "https://devaluapp.vercel.app/",
-            icon: <Icons.globe className="size-3" />,
+            icon: "globe",
           },
           {
             type: "Source",
             href: "https://github.com/manuel-barreiro/devaluapp",
-            icon: <Icons.github className="size-3" />,
+            icon: "github",
           },
         ],
         image: "",
@@ -193,7 +218,7 @@ export const EN_DATA = {
           "Design and development of a web application for a bar, which has an ordering system integrated with Mercado Pago for payment processing. Includes email notifications, and an administrator panel to view payments and orders.",
         technologies: [
           "Next.js",
-          "Typescript",
+          "TypeScript",
           "MongoDB",
           "Prisma",
           "TailwindCSS",
@@ -204,12 +229,12 @@ export const EN_DATA = {
           {
             type: "Website",
             href: "https://shortcut-nigeria.vercel.app/",
-            icon: <Icons.globe className="size-3" />,
+            icon: "globe",
           },
           {
             type: "Source",
             href: "https://github.com/manuel-barreiro/inTime",
-            icon: <Icons.github className="size-3" />,
+            icon: "github",
           },
         ],
         image: "/shortcut.webp",
@@ -230,4 +255,8 @@ export const EN_DATA = {
     projects: "My Projects",
     contact: "Contact",
   },
-} as const
+  skillsFilter: {
+    other: "Other",
+    databases: "Databases",
+  },
+} satisfies LanguageData
