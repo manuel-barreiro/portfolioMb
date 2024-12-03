@@ -52,18 +52,13 @@ export default function SkillsFilter({
   blurFadeDelay: number
 }) {
   return (
-    <Tabs defaultValue="all" className="flex w-auto flex-col">
-      <TabsList className="w-auto rounded-none rounded-t-md">
-        <div className="grid grid-cols-2 gap-2">
-          <TabsTrigger value="all">All</TabsTrigger>
-          <TabsTrigger value="other">Other</TabsTrigger>
-        </div>
-      </TabsList>
+    <Tabs defaultValue="frontend" className="flex w-auto flex-col">
       <TabsList className="w-auto rounded-none rounded-b-md">
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-4 gap-2">
           <TabsTrigger value="frontend">Front End</TabsTrigger>
           <TabsTrigger value="backend">Back End</TabsTrigger>
           <TabsTrigger value="database">Databases</TabsTrigger>
+          <TabsTrigger value="other">Other</TabsTrigger>
         </div>
       </TabsList>
 
@@ -78,19 +73,6 @@ export default function SkillsFilter({
           </div>
         </TabsContent>
       ))}
-
-      <TabsContent value="all" className="mt-4">
-        <div className="flex flex-wrap justify-center gap-1">
-          {Object.values(toolCategories)
-            .flat()
-            .sort()
-            .map((tool, id) => (
-              <BlurFade key={tool} delay={blurFadeDelay * 10 + id * 0.05}>
-                <Badge>{tool}</Badge>
-              </BlurFade>
-            ))}
-        </div>
-      </TabsContent>
     </Tabs>
   )
 }

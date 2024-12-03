@@ -44,7 +44,7 @@ export const ES_DATA = {
         "Asistí en el desarrollo e implementación de aplicaciones. Realicé revisiones de código y procesos de control de calidad. Generé documentación completa de sistemas de software.",
     },
     {
-      company: "Instituto de Energía Austral",
+      company: "Inst. de Energía Austral",
       badges: [],
       href: "http://www.ieaustral.com/",
       location: "Presencial",

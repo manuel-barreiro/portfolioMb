@@ -44,7 +44,7 @@ export const EN_DATA = {
         "Assisted in application development and implementation. Conducted code reviews and quality assurance processes. Generated comprehensive software system documentation.",
     },
     {
-      company: "Instituto de Energía Austral",
+      company: "Inst. de Energía Austral",
       badges: [],
       href: "http://www.ieaustral.com/",
       location: "On-Site",
