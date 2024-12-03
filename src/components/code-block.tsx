@@ -24,7 +24,7 @@ export default function CodeBlock() {
       </div>
 
       <div className="group relative">
-        <div className="p-4 font-mono text-sm">
+        <div className="p-3 font-mono text-xs sm:p-4 sm:text-sm">
           <span className="text-gray-500">$</span>{" "}
           <span className="text-gray-200">{t("terminal.eng")}</span>{" "}
           <span className="text-yellow-500">{t("terminal.whoCodes")}</span>
