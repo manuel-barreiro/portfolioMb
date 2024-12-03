@@ -102,66 +102,63 @@ export const EN_DATA = {
   },
   projects: {
     heading: "Check Out My Latest Work",
+    description:
+      "I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.",
     recent: [
       {
-        title: "Chat Collect",
-        href: "https://chatcollect.com",
-        dates: "Jan 2024 - Feb 2024",
+        title: "Reformer Club",
+        href: "https://reformer.com.ar",
+        dates: "",
         active: true,
         description:
-          "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+          "Development of landing page, payment system and booking system for pilates and yoga studio. Smooth scroll with Lenis library, animations with Framer Motion and responsive design. Developed with Next.js and TypeScript. Prisma ORM and PostgreSQL for the database.",
         technologies: [
           "Next.js",
           "Typescript",
           "PostgreSQL",
           "Prisma",
           "TailwindCSS",
-          "Stripe",
+          "MercadoPago",
           "Shadcn UI",
-          "Magic UI",
         ],
         links: [
           {
             type: "Website",
-            href: "https://chatcollect.com",
-            icon: <Icons.globe className="size-3" />,
-          },
-        ],
-        image: "",
-        video:
-          "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
-      },
-      {
-        title: "Magic UI",
-        href: "https://magicui.design",
-        dates: "June 2023 - Present",
-        active: true,
-        description:
-          "Designed, developed and sold animated UI components for developers.",
-        technologies: [
-          "Next.js",
-          "Typescript",
-          "PostgreSQL",
-          "Prisma",
-          "TailwindCSS",
-          "Stripe",
-          "Shadcn UI",
-          "Magic UI",
-        ],
-        links: [
-          {
-            type: "Website",
-            href: "https://magicui.design",
+            href: "https://reformer.com.ar",
             icon: <Icons.globe className="size-3" />,
           },
           {
             type: "Source",
-            href: "https://github.com/magicuidesign/magicui",
+            href: "https://github.com/manuel-barreiro/reformer",
             icon: <Icons.github className="size-3" />,
           },
         ],
         image: "",
-        video: "https://cdn.magicui.design/bento-grid.mp4",
+        video:
+          "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/reformer.mp4",
+      },
+      {
+        title: "Power Consultant",
+        href: "https://www.powerconsultant.com.ar/",
+        dates: "",
+        active: true,
+        description:
+          "Design and development (Figma to code) of corporate landing page and product catalog. Developed using Next.js (App router), optimized by taking advantage of SSR (server side rendering).",
+        technologies: ["Next.js", "Javascript", "TailwindCSS", "Figma"],
+        links: [
+          {
+            type: "Website",
+            href: "https://www.powerconsultant.com.ar/",
+            icon: <Icons.globe className="size-3" />,
+          },
+          {
+            type: "Source",
+            href: "https://github.com/manuel-barreiro/power_consultant",
+            icon: <Icons.github className="size-3" />,
+          },
+        ],
+        image: "",
+        video: "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/power.mp4",
       },
       {
         title: "llm.report",

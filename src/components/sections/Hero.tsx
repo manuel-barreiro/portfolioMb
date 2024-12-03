@@ -24,7 +24,7 @@ export default function Hero({ blurFadeDelay }: { blurFadeDelay: number }) {
               text={`${t.greeting} ${staticData.name.split(" ")[0]} 👋🏽`}
             />
             <BlurFadeText
-              className="max-w-[600px] text-sm md:text-xl"
+              className="prose max-w-[600px] text-pretty font-sans text-sm text-muted-foreground dark:prose-invert md:text-xl"
               delay={blurFadeDelay}
               text={t.description}
             />

@@ -21,6 +21,7 @@ const toolCategories = {
     "Framer Motion",
     "Figma",
     "Vite",
+    "Lenis",
   ],
   backend: ["Node.js", "Express.js", "Prisma", "Python"],
   database: ["PostgreSQL", "MongoDB", "MySQL", "SQLite"],
