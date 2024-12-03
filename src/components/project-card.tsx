@@ -1,31 +1,31 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge"
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import Link from "next/link";
-import Markdown from "react-markdown";
+} from "@/components/ui/card"
+import { cn } from "@/lib/utils"
+import Image from "next/image"
+import Link from "next/link"
+import Markdown from "react-markdown"
 
 interface Props {
-  title: string;
-  href?: string;
-  description: string;
-  dates: string;
-  tags: readonly string[];
-  link?: string;
-  image?: string;
-  video?: string;
+  title: string
+  href?: string
+  description: string
+  dates: string
+  tags: readonly string[]
+  link?: string
+  image?: string
+  video?: string
   links?: readonly {
-    icon: React.ReactNode;
-    type: string;
-    href: string;
-  }[];
-  className?: string;
+    icon: React.ReactNode
+    type: string
+    href: string
+  }[]
+  className?: string
 }
 
 export function ProjectCard({
@@ -42,9 +42,13 @@ export function ProjectCard({
 }: Props) {
   return (
     <Card
-      className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
-      }
+      className={cn(
+        "flex h-full flex-col overflow-hidden border shadow-lg transition-all duration-300 ease-out hover:shadow-xl",
+        // Light mode gradient - warm cream to slightly darker cream
+        "bg-gradient-to-br from-white via-[hsl(60,30%,98%)] to-[hsl(60,30%,94%)]",
+        // Dark mode gradient - deep charcoal to slightly lighter charcoal
+        "dark:from-[hsl(240,10%,10%)] dark:via-[hsl(240,10%,12%)] dark:to-[hsl(240,10%,15%)]"
+      )}
     >
       <Link
         href={href || "#"}
@@ -70,14 +74,14 @@ export function ProjectCard({
           />
         )}
       </Link>
-      <CardHeader className="px-2">
+      <CardHeader className="p-2">
         <div className="space-y-1">
           <CardTitle className="mt-1 text-base">{title}</CardTitle>
           <time className="font-sans text-xs">{dates}</time>
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full text-pretty text-justify font-sans text-xs text-muted-foreground dark:prose-invert">
             {description}
           </Markdown>
         </div>
@@ -112,5 +116,5 @@ export function ProjectCard({
         )}
       </CardFooter>
     </Card>
-  );
+  )
 }

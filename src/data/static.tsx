@@ -44,12 +44,12 @@ export const staticData = {
         icon: Icons.whatsapp,
         navbar: true,
       },
-      email: {
-        name: "Send Email",
-        url: "#",
-        icon: Icons.email,
-        navbar: true,
-      },
+      // email: {
+      //   name: "Send Email",
+      //   url: "#",
+      //   icon: Icons.email,
+      //   navbar: true,
+      // },
     },
   },
 }
