@@ -7,7 +7,7 @@ export const staticData = {
   url: "https://mbarreiro.dev",
   location: "Buenos Aires, Argentina",
   locationLink: "https://www.google.com/maps/place/buenosaires",
-  avatarUrl: "/me1.jpg",
+  avatarUrl: "/me.png",
   skills: [
     "React",
     "Next.js",

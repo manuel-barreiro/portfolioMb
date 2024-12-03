@@ -61,7 +61,7 @@ export const EN_DATA = {
       href: "https://www.ferrero.com/",
       location: "On-Site",
       title: "Engineering Intern",
-      logoUrl: "/ferrero.jpg",
+      logoUrl: "/ferrero.png",
       start: "mar 2021",
       end: "may 2022",
       description:
