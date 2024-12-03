@@ -1,6 +1,7 @@
 import BlurFade from "@/components/magicui/blur-fade"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { useTranslations } from "next-intl"
 
 const toolCategories = {
   frontend: [
@@ -23,7 +24,7 @@ const toolCategories = {
     "Vite",
     "Lenis",
   ],
-  backend: ["Node.js", "Express.js", "Prisma", "Python"],
+  backend: ["Next.js", "Node.js", "Express.js", "Prisma", "Python"],
   database: ["PostgreSQL", "MongoDB", "MySQL", "SQLite"],
   other: [
     "Amazon AWS",
@@ -52,14 +53,15 @@ export default function SkillsFilter({
 }: {
   blurFadeDelay: number
 }) {
+  const t = useTranslations()
   return (
     <Tabs defaultValue="frontend" className="flex w-auto flex-col">
       <TabsList className="w-auto rounded-none rounded-b-md">
         <div className="grid grid-cols-4 gap-2">
           <TabsTrigger value="frontend">Front End</TabsTrigger>
           <TabsTrigger value="backend">Back End</TabsTrigger>
-          <TabsTrigger value="database">Databases</TabsTrigger>
-          <TabsTrigger value="other">Other</TabsTrigger>
+          <TabsTrigger value="other">{t("skillsFilter.databases")}</TabsTrigger>
+          <TabsTrigger value="database">{t("skillsFilter.other")}</TabsTrigger>
         </div>
       </TabsList>
 

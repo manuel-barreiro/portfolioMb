@@ -1,6 +1,16 @@
-import { Icons } from "@/components/icons"
+import { LanguageData } from "@/types/language-data"
 
-export const ES_DATA = {
+export default {
+  name: "Manuel Barreiro",
+  initials: "MB",
+  url: "https://mbarreiro.dev",
+  location: "Buenos Aires, Argentina",
+  locationLink: "https://www.google.com/maps/place/buenosaires",
+  avatarUrl: "/me.png",
+  contactInfo: {
+    email: "ing.mbarreiro@gmail.com",
+    tel: "+5491166726968",
+  },
   greeting: "Hola, soy",
   description:
     "Ingeniero Industrial que programa. Creando soluciones tecnológicas para retos del mundo real :)",
@@ -77,14 +87,14 @@ export const ES_DATA = {
       start: "2019",
       end: "2023",
     },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "Diploma IB",
-      logoUrl: "/ib.png",
-      start: "",
-      end: "",
-    },
+    // {
+    //   school: "International Baccalaureate",
+    //   href: "https://ibo.org",
+    //   degree: "Diploma IB",
+    //   logoUrl: "/ib.png",
+    //   start: "",
+    //   end: "",
+    // },
     {
       school: "St. Matthew's College",
       href: "https://www.smc.edu.ar/",
@@ -109,10 +119,10 @@ export const ES_DATA = {
         dates: "",
         active: true,
         description:
-          "Desarrollo de landing page, sistema de pagos y reservas para estudio de pilates y yoga. Smooth scroll con librería Lenis, animaciones con Framer Motion y diseño responsive. Desarrollado con Next.js y Typescript. Prisma ORM y PostgreSQL para la base de datos.",
+          "Desarrollo de landing page, sistema de pagos y reservas para estudio de pilates y yoga. Smooth scroll con librería Lenis, animaciones con Framer Motion y diseño responsive. Desarrollado con Next.js y TypeScript. Prisma ORM y PostgreSQL para la base de datos.",
         technologies: [
           "Next.js",
-          "Typescript",
+          "TypeScript",
           "PostgreSQL",
           "Prisma",
           "TailwindCSS",
@@ -123,12 +133,12 @@ export const ES_DATA = {
           {
             type: "Website",
             href: "https://reformer.com.ar",
-            icon: <Icons.globe className="size-3" />,
+            icon: "globe",
           },
           {
             type: "Source",
             href: "https://github.com/manuel-barreiro/reformer",
-            icon: <Icons.github className="size-3" />,
+            icon: "github",
           },
         ],
         image: "",
@@ -142,17 +152,25 @@ export const ES_DATA = {
         active: true,
         description:
           "Diseño y desarrollo (Figma to code) de landing page corporativa y catálogo de productos. Desarrollado utilizando Next.js (App router), optimizado aprovechando el SSR (renderizado del lado del servidor).",
-        technologies: ["Next.js", "Javascript", "TailwindCSS", "Figma"],
+        technologies: [
+          "Next.js",
+          "Javascript",
+          "TailwindCSS",
+          "Figma",
+          "Framer Motion",
+          "Zod",
+          "React Hook Form",
+        ],
         links: [
           {
             type: "Website",
             href: "https://www.powerconsultant.com.ar/",
-            icon: <Icons.globe className="size-3" />,
+            icon: "globe",
           },
           {
             type: "Source",
             href: "https://github.com/manuel-barreiro/power_consultant",
-            icon: <Icons.github className="size-3" />,
+            icon: "github",
           },
         ],
         image: "",
@@ -164,18 +182,26 @@ export const ES_DATA = {
         dates: "",
         active: true,
         description:
-          "DevaluApp te ayuda a calcular la apreciación/devaluación de tu salario en pesos en relación al valor del dólar estadounidense. Lo hace utilizando la API de Bluelytics. Desarrollado utilizando Next.js, con estilos realizados a través de Tailwind CSS.",
-        technologies: ["Next.js", "Typescript", "TailwindCSS", "Shadcn UI"],
+          "DevaluApp te ayuda a calcular la apreciación o devaluación de tu salario en pesos en relación al valor del dólar estadounidense. Lo hace utilizando la API de Bluelytics. Desarrollado utilizando Next.js, con estilos realizados a través de Tailwind CSS.",
+        technologies: [
+          "Next.js",
+          "TypeScript",
+          "TailwindCSS",
+          "Shadcn UI",
+          "Framer Motion",
+          "Zod",
+          "React Hook Form",
+        ],
         links: [
           {
             type: "Website",
             href: "https://devaluapp.vercel.app/",
-            icon: <Icons.globe className="size-3" />,
+            icon: "globe",
           },
           {
             type: "Source",
             href: "https://github.com/manuel-barreiro/devaluapp",
-            icon: <Icons.github className="size-3" />,
+            icon: "github",
           },
         ],
         image: "",
@@ -191,7 +217,7 @@ export const ES_DATA = {
           "Diseño y desarrollo de una aplicación web para un bar, que cuenta con un sistema de pedidos integrado con Mercado Pago para el procesamiento de pagos. Incluye notificaciones por correo electrónico, y panel de administrador para visualizar pagos y órdenes.",
         technologies: [
           "Next.js",
-          "Typescript",
+          "TypeScript",
           "MongoDB",
           "Prisma",
           "TailwindCSS",
@@ -202,12 +228,12 @@ export const ES_DATA = {
           {
             type: "Website",
             href: "https://shortcut-nigeria.vercel.app/",
-            icon: <Icons.globe className="size-3" />,
+            icon: "globe",
           },
           {
             type: "Source",
             href: "https://github.com/manuel-barreiro/inTime",
-            icon: <Icons.github className="size-3" />,
+            icon: "github",
           },
         ],
         image: "/shortcut.webp",
@@ -228,4 +254,8 @@ export const ES_DATA = {
     projects: "Mis Proyectos",
     contact: "Contacto",
   },
-}
+  skillsFilter: {
+    other: "Otras",
+    databases: "DBs",
+  },
+} satisfies LanguageData

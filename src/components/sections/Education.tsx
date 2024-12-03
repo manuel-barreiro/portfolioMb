@@ -1,22 +1,23 @@
-"use client"
 import BlurFade from "@/components/magicui/blur-fade"
-import { ResumeCard } from "@/components/resume-card"
-import { useTranslation } from "@/hooks/useTranslation"
+import { ResumeCard } from "@/components/cards/resume-card"
+import { EducationEntry } from "@/types/language-data"
+import { useTranslations } from "next-intl"
 
 export default function Education({
   blurFadeDelay,
 }: {
   blurFadeDelay: number
 }) {
-  const { t } = useTranslation()
+  const t = useTranslations()
+  const educationEntries = t.raw("education") as EducationEntry[]
 
   return (
     <section id="education">
       <div className="flex min-h-0 flex-col gap-y-3">
         <BlurFade delay={blurFadeDelay * 7}>
-          <h2 className="text-xl font-bold">{t.sectionTitles.education}</h2>
+          <h2 className="text-xl font-bold">{t("sectionTitles.education")}</h2>
         </BlurFade>
-        {t.education.map((education, id) => (
+        {educationEntries.map((education, id) => (
           <BlurFade
             key={education?.school}
             delay={blurFadeDelay * 8 + id * 0.05}

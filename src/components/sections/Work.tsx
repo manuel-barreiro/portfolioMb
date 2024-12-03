@@ -1,18 +1,19 @@
-"use client"
 import BlurFade from "@/components/magicui/blur-fade"
-import { ResumeCard } from "@/components/resume-card"
-import { useTranslation } from "@/hooks/useTranslation"
+import { ResumeCard } from "@/components/cards/resume-card"
+import { WorkEntry } from "@/types/language-data"
+import { useTranslations } from "next-intl"
 
 export default function Work({ blurFadeDelay }: { blurFadeDelay: number }) {
-  const { t } = useTranslation()
+  const t = useTranslations()
+  const workEntries = t.raw("work") as WorkEntry[]
 
   return (
     <section id="work">
       <div className="flex min-h-0 flex-col gap-y-3">
         <BlurFade delay={blurFadeDelay * 5}>
-          <h2 className="text-xl font-bold">{t.sectionTitles.work}</h2>
+          <h2 className="text-xl font-bold">{t("sectionTitles.work")}</h2>
         </BlurFade>
-        {t.work.map((work, id) => (
+        {workEntries.map((work, id) => (
           <BlurFade key={work.company} delay={blurFadeDelay * 6 + id * 0.05}>
             <ResumeCard
               key={work.company}
