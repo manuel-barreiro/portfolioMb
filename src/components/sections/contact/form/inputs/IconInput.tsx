@@ -8,6 +8,7 @@ export default function IconInput({
   label,
   placeholder,
   icon: Icon,
+  type,
 }: InputProps) {
   return (
     <div className="space-y-2">
@@ -20,6 +21,7 @@ export default function IconInput({
         )}
         <Input
           id="input-10"
+          type={type ? type : "text"}
           className={cn(
             "duration-400 flex h-10 w-full rounded-md border-none bg-secondary px-3 py-2 text-sm text-zinc-800 shadow-md transition-shadow placeholder:text-neutral-400 focus-visible:shadow-xl focus-visible:ring-[2px] focus-visible:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-zinc-800 dark:text-primary dark:focus-visible:ring-neutral-200",
             Icon ? "ps-12" : ""

@@ -9,4 +9,5 @@ export interface InputProps {
   label: string
   placeholder?: string
   icon?: LucideIcon
+  type?: string
 }

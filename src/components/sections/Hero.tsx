@@ -26,7 +26,8 @@ export default function Hero({ blurFadeDelay }: { blurFadeDelay: number }) {
           </div>
           <BlurFade delay={blurFadeDelay}>
             <Avatar className="size-28 border">
-              <AvatarImage alt={t("name")} src={t("avatarUrl")} />
+              {/* src={t("avatarUrl")} */}
+              <AvatarImage alt={t("name")} src={"/me2.png"} />
               <AvatarFallback>{t("initials")}</AvatarFallback>
             </Avatar>
           </BlurFade>

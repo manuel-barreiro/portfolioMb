@@ -73,6 +73,7 @@ export default function ContactForm() {
                 label={t("contact.form.name.label")}
                 placeholder={t("contact.form.name.placeholder")}
                 icon={User}
+                type="text"
               />
               <FormMessage />
             </FormItem>
@@ -104,6 +105,7 @@ export default function ContactForm() {
                 label={t("contact.form.email.label")}
                 icon={Mail}
                 placeholder={t("contact.form.email.placeholder")}
+                type="email"
               />
               <FormMessage />
             </FormItem>
