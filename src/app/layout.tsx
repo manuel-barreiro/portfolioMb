@@ -7,7 +7,7 @@ import "./globals.css"
 import Navbar from "@/components/navbar/navbar"
 import { NextIntlClientProvider } from "next-intl"
 import { getLocale, getMessages, getTranslations } from "next-intl/server"
-import { Toaster } from "@/components/ui/toaster"
+import { ToastProvider } from "@/components/custom-toast/ToastProvider"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -87,11 +87,12 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <TooltipProvider delayDuration={0}>
-              {children}
-              <Navbar />
-            </TooltipProvider>
-            <Toaster />
+            <ToastProvider>
+              <TooltipProvider delayDuration={0}>
+                {children}
+                <Navbar />
+              </TooltipProvider>
+            </ToastProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

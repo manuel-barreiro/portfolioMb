@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { Button } from "@/components/ui/button"
 import { Form, FormField, FormItem, FormMessage } from "@/components/ui/form"
-import { useToast } from "@/components/hooks/use-toast"
 import { Textarea } from "@/components/ui/textarea"
 import PhoneNumberInput from "./inputs/PhoneNumberInput"
 import IconInput from "./inputs/IconInput"
@@ -15,10 +14,12 @@ import { useTranslations } from "next-intl"
 import { useState } from "react"
 import { sendEmail } from "@/actions/contact"
 import { Send, LoaderCircle } from "lucide-react"
+import { useToast } from "@/components/custom-toast/ToastProvider"
 
 export default function ContactForm() {
   const t = useTranslations()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const { showToast } = useToast()
 
   const formSchema = z.object({
     name: z.string().min(2, t("contact.form.name.error.min")),
@@ -29,7 +30,6 @@ export default function ContactForm() {
       .email(t("contact.form.email.error.invalid")),
     message: z.string().min(10, t("contact.form.message.error.min")),
   })
-  const { toast } = useToast()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -45,26 +45,13 @@ export default function ContactForm() {
       const result = await sendEmail(values)
 
       if (result.success) {
-        toast({
-          title: t("contact.form.toast.success"),
-          description: t("contact.form.toast.successDesc"),
-          variant: "default",
-
-          className:
-            "bg-gradient-to-br from-black to-neutral-600 text-white dark:from-zinc-600 dark:to-zinc-500",
-          duration: 5000,
-        })
+        showToast(t("contact.form.toast.success"), "success")
         form.reset()
       } else {
         throw new Error(result.error)
       }
     } catch (error) {
-      toast({
-        title: t("contact.form.toast.error"),
-        description: t("contact.form.toast.errorDesc"),
-        variant: "destructive",
-        duration: 5000,
-      })
+      showToast(t("contact.form.toast.error"), "error")
     } finally {
       setIsSubmitting(false)
     }
