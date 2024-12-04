@@ -276,6 +276,13 @@ const data: LanguageData = {
         sending: "Enviando...",
         success: "¡Mensaje enviado!",
       },
+      toast: {
+        success: "Mensaje enviado",
+        successDesc: "¡Gracias por contactarme! Te responderé a la brevedad.",
+        error: "Error al enviar mensaje",
+        errorDesc:
+          "Hubo un error al enviar tu mensaje. Por favor, intentá nuevamente.",
+      },
     },
   },
   sectionTitles: {

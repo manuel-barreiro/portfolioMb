@@ -284,6 +284,12 @@ export default {
         sending: "Sending...",
         success: "Message sent!",
       },
+      toast: {
+        success: "Message sent",
+        successDesc: "Thanks for contacting me! I'll reply shortly.",
+        error: "Error sending message",
+        errorDesc: "There was an error sending your message. Please try again.",
+      },
     },
   },
   sectionTitles: {

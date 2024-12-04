@@ -14,17 +14,12 @@ import { Label } from "@/components/ui/label"
 import { useTranslations } from "next-intl"
 import { useState } from "react"
 import { sendEmail } from "@/actions/contact"
-
-const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  phone: z.string().min(10, "Please enter a valid phone number"),
-  email: z.string().email("Please enter a valid email address"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
-})
+import { Send, LoaderCircle } from "lucide-react"
 
 export default function ContactForm() {
   const t = useTranslations()
   const [isSubmitting, setIsSubmitting] = useState(false)
+
   const formSchema = z.object({
     name: z.string().min(2, t("contact.form.name.error.min")),
     phone: z.string().min(10, t("contact.form.phone.error.required")),
@@ -44,7 +39,6 @@ export default function ContactForm() {
       message: "",
     },
   })
-
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true)
     try {
@@ -52,9 +46,12 @@ export default function ContactForm() {
 
       if (result.success) {
         toast({
-          title: t("contact.form.submitBtn.success"),
-          description: t("contact.form.submitBtn.successDesc"),
+          title: t("contact.form.toast.success"),
+          description: t("contact.form.toast.successDesc"),
           variant: "default",
+
+          className:
+            "bg-gradient-to-br from-black to-neutral-600 text-white dark:from-zinc-600 dark:to-zinc-500",
           duration: 5000,
         })
         form.reset()
@@ -63,8 +60,8 @@ export default function ContactForm() {
       }
     } catch (error) {
       toast({
-        title: t("contact.form.submitBtn.error"),
-        description: t("contact.form.submitBtn.errorDesc"),
+        title: t("contact.form.toast.error"),
+        description: t("contact.form.toast.errorDesc"),
         variant: "destructive",
         duration: 5000,
       })
@@ -151,9 +148,19 @@ export default function ContactForm() {
           disabled={isSubmitting}
           className="block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:from-zinc-600 dark:to-zinc-500 dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
         >
-          {isSubmitting
-            ? t("contact.form.submitBtn.sending")
-            : t("contact.form.submitBtn.default")}
+          {isSubmitting ? (
+            <div className="flex w-full items-center justify-center gap-2">
+              <LoaderCircle className="h-4 w-4 animate-spin" />
+
+              <p>{t("contact.form.submitBtn.sending")}</p>
+            </div>
+          ) : (
+            <div className="flex w-full items-center justify-center gap-2">
+              <Send className="h-4 w-4" />
+
+              <p>{t("contact.form.submitBtn.default")}</p>
+            </div>
+          )}
         </Button>
       </form>
     </Form>

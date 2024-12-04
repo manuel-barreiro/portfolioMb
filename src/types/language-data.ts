@@ -107,6 +107,12 @@ export type LanguageData = {
         sending: string
         success: string
       }
+      toast: {
+        success: string
+        successDesc: string
+        error: string
+        errorDesc: string
+      }
     }
   }
   sectionTitles: {
