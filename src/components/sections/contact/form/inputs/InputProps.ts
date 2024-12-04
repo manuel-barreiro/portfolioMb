@@ -7,5 +7,6 @@ export interface InputProps {
     "name" | "phone" | "email" | "message"
   >
   label: string
+  placeholder?: string
   icon?: LucideIcon
 }

@@ -8,19 +8,25 @@ import React, { forwardRef } from "react"
 import * as RPNInput from "react-phone-number-input"
 import flags from "react-phone-number-input/flags"
 import { InputProps } from "./InputProps"
+import { useTranslations } from "next-intl"
 
-export default function PhoneNumberInput({ field, label }: InputProps) {
+export default function PhoneNumberInput({
+  field,
+  label,
+  placeholder,
+}: InputProps) {
   return (
     <div className="space-y-2" dir="ltr">
       <Label htmlFor="input-46">{label}</Label>
       <RPNInput.default
         className="flex rounded-lg shadow-sm shadow-black/5"
         international
+        defaultCountry="AR"
         flagComponent={FlagComponent}
         countrySelectComponent={CountrySelect}
         inputComponent={PhoneInput}
         id="input-46"
-        placeholder="Enter phone number"
+        placeholder={placeholder}
         value={field.value}
         onChange={(value) => field.onChange(value ?? "")}
       />
@@ -33,7 +39,7 @@ const PhoneInput = forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
     return (
       <Input
         className={cn(
-          "-ms-px rounded-s-none shadow-none focus-visible:z-10",
+          "dark:placeholder-text-neutral-600 duration-400 peer -ms-px flex h-10 w-full rounded-md rounded-s-none border-none bg-gray-50 bg-secondary px-3 py-2 text-sm text-black shadow-md transition placeholder:text-neutral-400 focus-visible:z-10 focus-visible:outline-none focus-visible:ring-[2px] focus-visible:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50 group-hover/input:shadow-none dark:bg-zinc-800 dark:text-white dark:shadow-[0px_0px_1px_1px_var(--neutral-700)] dark:focus-visible:ring-neutral-600",
           className
         )}
         ref={ref}
@@ -61,9 +67,10 @@ const CountrySelect = ({
   const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
     onChange(event.target.value as RPNInput.Country)
   }
+  const t = useTranslations()
 
   return (
-    <div className="relative inline-flex items-center self-stretch rounded-s-lg border border-input bg-background py-2 pe-2 ps-3 text-muted-foreground transition-shadow focus-within:z-10 focus-within:border-ring focus-within:outline-none focus-within:ring-[3px] focus-within:ring-ring/20 hover:bg-accent hover:text-foreground has-[:disabled]:pointer-events-none has-[:disabled]:opacity-50">
+    <div className="relative inline-flex items-center self-stretch rounded-s-lg border border-input bg-gray-100/70 py-2 pe-2 ps-3 text-muted-foreground shadow-md transition-shadow focus-within:z-10 focus-within:border-ring focus-within:outline-none focus-within:ring-[3px] focus-within:ring-ring/20 hover:bg-accent hover:text-foreground has-[:disabled]:pointer-events-none has-[:disabled]:opacity-50 dark:bg-zinc-900">
       <div className="inline-flex items-center gap-1" aria-hidden="true">
         <FlagComponent country={value} countryName={value} aria-hidden="true" />
         <span className="text-muted-foreground/80">
@@ -78,7 +85,7 @@ const CountrySelect = ({
         aria-label="Select country"
       >
         <option key="default" value="">
-          Select a country
+          {t("contact.form.phone.dropdownText")}
         </option>
         {options
           .filter((x) => x.value)

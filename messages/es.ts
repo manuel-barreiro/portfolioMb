@@ -1,6 +1,6 @@
 import { LanguageData } from "@/types/language-data"
 
-export default {
+const data: LanguageData = {
   name: "Manuel Barreiro",
   initials: "MB",
   url: "https://mbarreiro.dev",
@@ -87,14 +87,6 @@ export default {
       start: "2019",
       end: "2023",
     },
-    // {
-    //   school: "International Baccalaureate",
-    //   href: "https://ibo.org",
-    //   degree: "Diploma IB",
-    //   logoUrl: "/ib.png",
-    //   start: "",
-    //   end: "",
-    // },
     {
       school: "St. Matthew's College",
       href: "https://www.smc.edu.ar/",
@@ -246,21 +238,62 @@ export default {
     description: "¿Tenés un proyecto interesante? Me encantaría conocerlo.",
     channels:
       "Contactame a través de las redes sociales o mediante este formulario. Te responderé lo antes posible.",
+    form: {
+      name: {
+        label: "Nombre Completo",
+        placeholder: "Ingresa tu nombre completo",
+        error: {
+          required: "El nombre completo es obligatorio",
+          min: "El nombre debe tener al menos 3 caracteres",
+        },
+      },
+      phone: {
+        label: "Número de Teléfono",
+        placeholder: "Ingresa tu número de teléfono",
+        error: {
+          required: "El número de teléfono es obligatorio",
+        },
+        dropdownText: "Selecciona tu país",
+      },
+      email: {
+        label: "Correo Electrónico",
+        placeholder: "Ingresa tu correo electrónico",
+        error: {
+          required: "La dirección de correo electrónico es obligatoria",
+          invalid: "Por favor ingresa un correo válido",
+        },
+      },
+      message: {
+        label: "Mensaje",
+        placeholder: "Ingresa tu consulta",
+        error: {
+          required: "El mensaje es obligatorio",
+          min: "El mensaje debe tener al menos 10 caracteres",
+        },
+      },
+      submitBtn: {
+        default: "Enviar Mensaje",
+        sending: "Enviando...",
+        success: "¡Mensaje enviado!",
+      },
+    },
   },
   sectionTitles: {
     about: "Sobre mí",
     work: "Experiencia Profesional",
     education: "Formación Académica",
-    skills: "Skills",
+    skills: "Habilidades",
     projects: "Mis Proyectos",
     contact: "Contacto",
   },
   skillsFilter: {
     other: "Otras",
-    databases: "DBs",
+    databases: "Bases de Datos",
   },
   terminal: {
     eng: "ingeniero industrial",
     whoCodes: "@que/programa",
   },
-} satisfies LanguageData
+}
+
+export default data

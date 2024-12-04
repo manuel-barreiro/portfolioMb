@@ -69,6 +69,45 @@ export type LanguageData = {
     heading: string
     description: string
     channels: string
+    form: {
+      name: {
+        label: string
+        placeholder: string
+        error: {
+          required: string
+          min: string
+        }
+      }
+      phone: {
+        label: string
+        placeholder: string
+        error: {
+          required: string
+        }
+        dropdownText: string
+      }
+      email: {
+        label: string
+        placeholder: string
+        error: {
+          required: string
+          invalid: string
+        }
+      }
+      message: {
+        label: string
+        placeholder: string
+        error: {
+          required: string
+          min: string
+        }
+      }
+      submitBtn: {
+        default: string
+        sending: string
+        success: string
+      }
+    }
   }
   sectionTitles: {
     about: string

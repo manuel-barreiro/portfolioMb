@@ -5,7 +5,7 @@ import ContactForm from "./form/ContactForm"
 export default function Contact({ blurFadeDelay }: { blurFadeDelay: number }) {
   const t = useTranslations()
   return (
-    <section id="contact">
+    <section id="contact" className="pb-20">
       <div className="grid w-full items-center justify-center gap-4 px-4 py-12 text-center md:px-6">
         <BlurFade delay={blurFadeDelay * 16}>
           <div className="space-y-3">

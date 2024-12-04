@@ -3,7 +3,12 @@ import { Label } from "@/components/ui/label"
 import { InputProps } from "./InputProps"
 import { cn } from "@/lib/utils"
 
-export default function IconInput({ field, label, icon: Icon }: InputProps) {
+export default function IconInput({
+  field,
+  label,
+  placeholder,
+  icon: Icon,
+}: InputProps) {
   return (
     <div className="space-y-2">
       <Label htmlFor="input-10">{label}</Label>
@@ -15,8 +20,11 @@ export default function IconInput({ field, label, icon: Icon }: InputProps) {
         )}
         <Input
           id="input-10"
-          className={cn("peer", Icon ? "ps-12" : "")}
-          placeholder={label}
+          className={cn(
+            "duration-400 flex h-10 w-full rounded-md border-none bg-secondary px-3 py-2 text-sm text-zinc-800 shadow-md transition-shadow placeholder:text-neutral-400 focus-visible:shadow-xl focus-visible:ring-[2px] focus-visible:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-zinc-800 dark:text-primary dark:focus-visible:ring-neutral-200",
+            Icon ? "ps-12" : ""
+          )}
+          placeholder={placeholder}
           {...field}
         />
       </div>

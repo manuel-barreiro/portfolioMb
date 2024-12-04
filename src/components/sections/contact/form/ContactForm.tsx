@@ -6,12 +6,14 @@ import * as z from "zod"
 import { Button } from "@/components/ui/button"
 import { Form, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import { useToast } from "@/components/hooks/use-toast"
-import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import PhoneNumberInput from "./inputs/PhoneNumberInput"
 import IconInput from "./inputs/IconInput"
 import { Mail, User } from "lucide-react"
 import { Label } from "@/components/ui/label"
+import { useTranslations } from "next-intl"
+import { useState } from "react"
+import { sendEmail } from "@/actions/contact"
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -21,6 +23,17 @@ const formSchema = z.object({
 })
 
 export default function ContactForm() {
+  const t = useTranslations()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const formSchema = z.object({
+    name: z.string().min(2, t("contact.form.name.error.min")),
+    phone: z.string().min(10, t("contact.form.phone.error.required")),
+    email: z
+      .string()
+      .min(1, t("contact.form.email.error.required"))
+      .email(t("contact.form.email.error.invalid")),
+    message: z.string().min(10, t("contact.form.message.error.min")),
+  })
   const { toast } = useToast()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -33,34 +46,50 @@ export default function ContactForm() {
   })
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true)
     try {
-      console.log(values)
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
-        variant: "default",
-        duration: 5000,
-      })
-      form.reset()
+      const result = await sendEmail(values)
+
+      if (result.success) {
+        toast({
+          title: t("contact.form.submitBtn.success"),
+          description: t("contact.form.submitBtn.successDesc"),
+          variant: "default",
+          duration: 5000,
+        })
+        form.reset()
+      } else {
+        throw new Error(result.error)
+      }
     } catch (error) {
       toast({
-        title: "An error occurred.",
-        description: "Please try again later.",
+        title: t("contact.form.submitBtn.error"),
+        description: t("contact.form.submitBtn.errorDesc"),
         variant: "destructive",
         duration: 5000,
       })
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="mx-auto max-w-lg space-y-6 font-[16px]"
+      >
         <FormField
           control={form.control}
           name="name"
           render={({ field }) => (
             <FormItem>
-              <IconInput field={field} label="Name" icon={User} />
+              <IconInput
+                field={field}
+                label={t("contact.form.name.label")}
+                placeholder={t("contact.form.name.placeholder")}
+                icon={User}
+              />
               <FormMessage />
             </FormItem>
           )}
@@ -71,7 +100,11 @@ export default function ContactForm() {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <PhoneNumberInput field={field} label="Phone" />
+              <PhoneNumberInput
+                field={field}
+                label={t("contact.form.phone.label")}
+                placeholder={t("contact.form.phone.placeholder")}
+              />
               <FormMessage />
             </FormItem>
           )}
@@ -82,7 +115,12 @@ export default function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <IconInput field={field} label="Email" icon={Mail} />
+              <IconInput
+                field={field}
+                label={t("contact.form.email.label")}
+                icon={Mail}
+                placeholder={t("contact.form.email.placeholder")}
+              />
               <FormMessage />
             </FormItem>
           )}
@@ -94,10 +132,12 @@ export default function ContactForm() {
           render={({ field }) => (
             <FormItem>
               <div className="space-y-2">
-                <Label htmlFor="textarea-03">Message</Label>
+                <Label htmlFor="textarea-03">
+                  {t("contact.form.message.label")}
+                </Label>
                 <Textarea
-                  placeholder="Type your message here"
-                  className="min-h-[120px]"
+                  placeholder={t("contact.form.message.placeholder")}
+                  className="duration-400 flex h-10 w-full rounded-md border-none bg-secondary px-3 py-2 text-sm text-zinc-800 shadow-md transition-shadow placeholder:text-neutral-400 focus-visible:ring-[2px] focus-visible:ring-neutral-400 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-zinc-800 dark:text-primary dark:focus-visible:ring-neutral-200"
                   {...field}
                 />
               </div>
@@ -106,8 +146,14 @@ export default function ContactForm() {
           )}
         />
 
-        <Button type="submit" className="w-full">
-          Send Message
+        <Button
+          type="submit"
+          disabled={isSubmitting}
+          className="block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:from-zinc-600 dark:to-zinc-500 dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+        >
+          {isSubmitting
+            ? t("contact.form.submitBtn.sending")
+            : t("contact.form.submitBtn.default")}
         </Button>
       </form>
     </Form>

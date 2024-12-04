@@ -246,6 +246,45 @@ export default {
     description: "Got an interesting project? I'd love to hear about it.",
     channels:
       "Reach out through any of my social media or this form - I'll get back to you as soon as possible.",
+    form: {
+      name: {
+        label: "Full Name",
+        placeholder: "Enter your full name",
+        error: {
+          required: "Full name is required",
+          min: "Message must be at least 10 characters",
+        },
+      },
+      phone: {
+        label: "Phone Number",
+        placeholder: "Enter your phone number",
+        error: {
+          required: "Phone number is required",
+        },
+        dropdownText: "Select your country",
+      },
+      email: {
+        label: "Email Address",
+        placeholder: "Enter your email address",
+        error: {
+          required: "Email address is required",
+          invalid: "Please enter a valid email address",
+        },
+      },
+      message: {
+        label: "Message",
+        placeholder: "Enter your message",
+        error: {
+          required: "Message is required",
+          min: "Message must be at least 10 characters",
+        },
+      },
+      submitBtn: {
+        default: "Send Message",
+        sending: "Sending...",
+        success: "Message sent!",
+      },
+    },
   },
   sectionTitles: {
     about: "About",
