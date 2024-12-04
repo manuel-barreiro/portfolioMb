@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { cn } from "@/lib/utils"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter as FontSans } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/navbar/navbar"
@@ -51,6 +51,13 @@ export async function generateMetadata(): Promise<Metadata> {
       yandex: "",
     },
   }
+}
+
+export const viewport: Viewport = {
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  width: "device-width",
 }
 
 export default async function RootLayout({

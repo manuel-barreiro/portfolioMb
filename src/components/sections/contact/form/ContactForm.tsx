@@ -74,7 +74,7 @@ export default function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="mx-auto max-w-lg space-y-6 font-[16px]"
+        className="mx-auto max-w-lg space-y-6 text-base"
       >
         <FormField
           control={form.control}
