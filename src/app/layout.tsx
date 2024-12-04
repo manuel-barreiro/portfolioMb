@@ -7,6 +7,7 @@ import "./globals.css"
 import Navbar from "@/components/navbar/navbar"
 import { NextIntlClientProvider } from "next-intl"
 import { getLocale, getMessages, getTranslations } from "next-intl/server"
+import { Toaster } from "@/components/ui/toaster"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -79,6 +80,7 @@ export default async function RootLayout({
               {children}
               <Navbar />
             </TooltipProvider>
+            <Toaster />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

@@ -2,7 +2,6 @@ import BlurFade from "@/components/magicui/blur-fade"
 import BlurFadeText from "@/components/magicui/blur-fade-text"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useTranslations } from "next-intl"
-import CodeBlock from "../code-block"
 
 export default function Hero({ blurFadeDelay }: { blurFadeDelay: number }) {
   const t = useTranslations()

@@ -1,5 +1,6 @@
 import BlurFade from "@/components/magicui/blur-fade"
 import { useTranslations } from "next-intl"
+import ContactForm from "./form/ContactForm"
 
 export default function Contact({ blurFadeDelay }: { blurFadeDelay: number }) {
   const t = useTranslations()
@@ -20,6 +21,7 @@ export default function Contact({ blurFadeDelay }: { blurFadeDelay: number }) {
           </div>
         </BlurFade>
       </div>
+      <ContactForm />
     </section>
   )
 }

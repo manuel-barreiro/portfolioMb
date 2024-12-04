@@ -260,7 +260,7 @@ export default {
     databases: "Databases",
   },
   terminal: {
-    eng: "industial engineer",
+    eng: "industrial engineer",
     whoCodes: "@who/codes",
   },
 } satisfies LanguageData
