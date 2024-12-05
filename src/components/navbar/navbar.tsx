@@ -48,7 +48,7 @@ export default function Navbar() {
                     "size-12"
                   )}
                 >
-                  <item.icon className="size-4" />
+                  <item.icon className="size-5" />
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
@@ -72,7 +72,7 @@ export default function Navbar() {
                       "size-12"
                     )}
                   >
-                    <social.icon className="size-4" />
+                    <social.icon className="size-5" />
                   </Link>
                 </TooltipTrigger>
                 <TooltipContent>
@@ -92,7 +92,7 @@ export default function Navbar() {
                 className="size-12"
                 onClick={toggleLanguage}
               >
-                <Globe className="size-4" />
+                <Globe className="size-5" />
                 <span className="sr-only">Toggle language</span>
               </Button>
             </TooltipTrigger>

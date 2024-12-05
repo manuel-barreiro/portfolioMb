@@ -15,8 +15,8 @@ export function ModeToggle() {
       className="size-12"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
-      <SunIcon className="size-4 text-neutral-800 dark:hidden dark:text-neutral-200" />
-      <MoonIcon className="hidden size-4 text-neutral-800 dark:block dark:text-neutral-200" />
+      <SunIcon className="size-5 text-neutral-800 dark:hidden dark:text-neutral-200" />
+      <MoonIcon className="hidden size-5 text-neutral-800 dark:block dark:text-neutral-200" />
     </Button>
   )
 }
