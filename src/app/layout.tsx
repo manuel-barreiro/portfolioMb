@@ -15,6 +15,7 @@ const fontSans = FontSans({
 })
 
 export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale()
   const t = await getTranslations()
   return {
     metadataBase: new URL(t("url")),
@@ -28,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: t("description"),
       url: t("url"),
       siteName: `${t("name")}`,
-      locale: "en_US",
+      locale: locale,
       type: "website",
     },
     robots: {
