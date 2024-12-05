@@ -13,21 +13,20 @@ export default function Hero({ blurFadeDelay }: { blurFadeDelay: number }) {
           <div className="flex flex-1 flex-col space-y-1.5">
             <BlurFadeText
               delay={blurFadeDelay}
-              className="text-2xl font-bold tracking-tighter sm:text-5xl xl:text-5xl/none"
+              className="text-xl font-bold tracking-tighter sm:!text-5xl xl:!text-5xl/none [@media(min-width:380px)]:text-2xl"
               yOffset={8}
               text={`${t("greeting")} ${t("name").split(" ")[0]} 👋🏽`}
             />
 
             <BlurFadeText
-              className="prose max-w-[600px] text-pretty font-sans text-sm text-muted-foreground dark:prose-invert sm:text-lg"
+              className="prose max-w-[450px] text-pretty font-sans text-sm text-muted-foreground dark:prose-invert sm:text-lg"
               delay={blurFadeDelay}
               text={t("description")}
             />
           </div>
           <BlurFade delay={blurFadeDelay}>
-            <Avatar className="size-28 border">
-              {/* src={t("avatarUrl")} */}
-              <AvatarImage alt={t("name")} src={"/me2.png"} />
+            <Avatar className="size-28 border lg:size-32">
+              <AvatarImage alt={t("name")} src={"/profile.webp"} />
               <AvatarFallback>{t("initials")}</AvatarFallback>
             </Avatar>
           </BlurFade>

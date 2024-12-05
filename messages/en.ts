@@ -6,14 +6,13 @@ export default {
   url: "https://mbarreiro.dev",
   location: "Buenos Aires, Argentina",
   locationLink: "https://www.google.com/maps/place/buenosaires",
-  avatarUrl: "/me.png",
   contactInfo: {
     email: "ing.mbarreiro@gmail.com",
     tel: "+5491166726968",
   },
   greeting: "Hi, I'm",
   description:
-    "Industrial Engineer × Software Developer. Creating practical tech solutions for tangible problems :)",
+    "Engineer & Software Developer. Creating practical tech solutions for tangible problems.",
   summary:
     "With a background in **Industrial Engineering** and focus on *Business Intelligence*, I've successfully transitioned into software development. During university, I specialized in **data-driven decision making** and worked as a *Data Engineer*. My journey with data programming sparked a **natural passion for software development**, leading me to work as a *Software Engineer* at **Nestlé IT**, while maintaining freelance projects in my spare time.",
   work: [
@@ -59,7 +58,7 @@ export default {
       href: "http://www.ieaustral.com/",
       location: "On-Site",
       title: "Data Analyst",
-      logoUrl: "/austral.png",
+      logoUrl: "/austral.jpeg",
       start: "oct 2021",
       end: "dec 2023",
       description:
@@ -83,7 +82,7 @@ export default {
       school: "Universidad Austral",
       href: "https://www.austral.edu.ar/",
       degree: "Industrial Engineering | Business Intelligence",
-      logoUrl: "/austral.png",
+      logoUrl: "/austral.jpeg",
       start: "2019",
       end: "2024",
     },
@@ -302,7 +301,7 @@ export default {
   },
   skillsFilter: {
     other: "Other",
-    databases: "Databases",
+    databases: "DBs",
   },
   terminal: {
     eng: "industrial engineer",

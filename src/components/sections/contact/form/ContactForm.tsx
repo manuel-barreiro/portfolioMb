@@ -61,7 +61,7 @@ export default function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="mx-auto max-w-lg space-y-6 text-base"
+        className="mx-auto max-w-lg space-y-6 text-sm"
       >
         <FormField
           control={form.control}
@@ -135,7 +135,7 @@ export default function ContactForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:from-zinc-600 dark:to-zinc-500 dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] transition-all duration-500 ease-in-out hover:from-neutral-800 hover:to-neutral-500 dark:from-zinc-600 dark:to-zinc-500 dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] dark:hover:from-zinc-500 dark:hover:to-zinc-400"
         >
           {isSubmitting ? (
             <div className="flex w-full items-center justify-center gap-2">

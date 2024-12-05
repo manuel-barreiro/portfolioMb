@@ -35,7 +35,7 @@ export default function Toast({
         "w-full rounded-lg p-4 shadow-lg",
         variant === "success"
           ? "bg-green-200 text-green-800 dark:bg-green-900 dark:text-green-300"
-          : "bg-red-50 text-red-800 dark:bg-red-900/50 dark:text-red-300"
+          : "bg-red-200 text-red-800 dark:bg-red-900 dark:text-red-300"
       )}
     >
       <div className="flex gap-2">

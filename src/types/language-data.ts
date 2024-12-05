@@ -46,7 +46,6 @@ export type LanguageData = {
   url: string
   location: string
   locationLink: string
-  avatarUrl: string
   contactInfo: {
     email: string
     tel: string

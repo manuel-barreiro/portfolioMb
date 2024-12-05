@@ -6,14 +6,13 @@ const data: LanguageData = {
   url: "https://mbarreiro.dev",
   location: "Buenos Aires, Argentina",
   locationLink: "https://www.google.com/maps/place/buenosaires",
-  avatarUrl: "/me.png",
   contactInfo: {
     email: "ing.mbarreiro@gmail.com",
     tel: "+5491166726968",
   },
   greeting: "Hola, soy",
   description:
-    "Ingeniero Industrial × Developer. Creando soluciones tecnológicas prácticas para problemas tangibles :)",
+    "Ingeniero & Developer. Creando soluciones tecnológicas para problemas tangibles.",
   summary:
     "Con formación en **Ingeniería Industrial** y enfoque en *Business Intelligence*, transicioné al desarrollo de software. Durante la universidad, me especialicé en la **toma de decisiones basada en datos** y trabajé como *Data Engineer*. Mi trayectoria con la programación orientada a datos despertó en mí una **pasión por el desarrollo de software**, llevándome a trabajar como *Developer* en **Nestlé IT**, mientras mantengo proyectos **freelance** en mi tiempo libre.",
   work: [
@@ -59,7 +58,7 @@ const data: LanguageData = {
       href: "http://www.ieaustral.com/",
       location: "Presencial",
       title: "Data Analyst",
-      logoUrl: "/austral.png",
+      logoUrl: "/austral.jpeg",
       start: "oct 2021",
       end: "dic 2023",
       description:
@@ -83,7 +82,7 @@ const data: LanguageData = {
       school: "Universidad Austral",
       href: "https://www.austral.edu.ar/",
       degree: "Ingeniería Industrial | Business Intelligence",
-      logoUrl: "/austral.png",
+      logoUrl: "/austral.jpeg",
       start: "2019",
       end: "2023",
     },
@@ -234,10 +233,10 @@ const data: LanguageData = {
     ],
   },
   contact: {
-    heading: "Conectemos",
-    description: "¿Tenés un proyecto interesante? Me encantaría conocerlo.",
+    heading: "Contactame",
+    description: "¿Tenés un proyecto interesante?",
     channels:
-      "Contactame a través de las redes sociales o mediante este formulario. Te responderé lo antes posible.",
+      "Contactame a través de mis redes sociales o mediante este formulario. Te responderé lo antes posible.",
     form: {
       name: {
         label: "Nombre Completo",
@@ -295,7 +294,7 @@ const data: LanguageData = {
   },
   skillsFilter: {
     other: "Otras",
-    databases: "Bases de Datos",
+    databases: "DBs",
   },
   terminal: {
     eng: "ingeniero industrial",
