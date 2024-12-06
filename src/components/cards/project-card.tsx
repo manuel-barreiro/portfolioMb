@@ -11,13 +11,14 @@ import Image from "next/image"
 import Link from "next/link"
 import Markdown from "react-markdown"
 import { Icons } from "@/components/icons"
+import SkillTag from "../sections/skills/components/SkillTag"
 
 interface Props {
   title: string
   href?: string
   description: string
   dates: string
-  tags: readonly string[]
+  tags: Array<{ slug: string; text: string }>
   link?: string
   image?: string
   video?: string
@@ -100,14 +101,20 @@ export function ProjectCard({
       <CardContent className="mt-auto flex flex-col px-2">
         {tags && tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
-            {tags?.map((tag) => (
-              <Badge
-                className="px-1 py-0 text-[10px]"
-                variant="default"
-                key={tag}
-              >
-                {tag}
-              </Badge>
+            {tags?.map((tag, idx) => (
+              // <Badge
+              //   className="px-1 py-0 text-[10px]"
+              //   variant="default"
+              //   key={tag}
+              // >
+              //   {tag}
+              // </Badge>
+              <SkillTag
+                key={idx}
+                slug={tag.slug}
+                text={tag.text}
+                className="gap-1 px-[3px] py-[2px] text-xs"
+              />
             ))}
           </div>
         )}

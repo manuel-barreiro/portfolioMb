@@ -121,13 +121,13 @@ export default {
         description:
           "Development of landing page, payment system and booking system for pilates and yoga studio. Smooth scroll with Lenis library, animations with Framer Motion and responsive design. Developed with Next.js and TypeScript. Prisma ORM and PostgreSQL for the database.",
         technologies: [
-          "Next.js",
-          "TypeScript",
-          "PostgreSQL",
-          "Prisma",
-          "TailwindCSS",
-          "MercadoPago",
-          "Shadcn UI",
+          { text: "Next.js", slug: "nextdotjs" },
+          { text: "TypeScript", slug: "typescript" },
+          { text: "PostgreSQL", slug: "postgresql" },
+          { text: "Prisma", slug: "prisma" },
+          { text: "TailwindCSS", slug: "tailwindcss" },
+          { text: "MercadoPago", slug: "mercadopago" },
+          { text: "Shadcn UI", slug: "shadcnui" },
         ],
         links: [
           {
@@ -153,13 +153,13 @@ export default {
         description:
           "Design and development (Figma to code) of corporate landing page and product catalog. Developed using Next.js (App router), optimized by taking advantage of SSR (server side rendering).",
         technologies: [
-          "Next.js",
-          "Javascript",
-          "TailwindCSS",
-          "Figma",
-          "Framer Motion",
-          "Zod",
-          "React Hook Form",
+          { text: "Next.js", slug: "nextdotjs" },
+          { text: "Javascript", slug: "javascript" },
+          { text: "TailwindCSS", slug: "tailwindcss" },
+          { text: "Figma", slug: "figma" },
+          { text: "Framer Motion", slug: "framer" },
+          { text: "Zod", slug: "zod" },
+          { text: "React Hook Form", slug: "reacthookform" },
         ],
         links: [
           {
@@ -184,13 +184,13 @@ export default {
         description:
           "DevaluApp helps you calculate the appreciation or devaluation of your salary in ARS in relation to the value of the US dollar. It does this using the Bluelytics API. Developed using Next.js, with styles done through Tailwind CSS.",
         technologies: [
-          "Next.js",
-          "TypeScript",
-          "TailwindCSS",
-          "Shadcn UI",
-          "Framer Motion",
-          "Zod",
-          "React Hook Form",
+          { text: "Next.js", slug: "nextdotjs" },
+          { text: "TypeScript", slug: "typescript" },
+          { text: "TailwindCSS", slug: "tailwindcss" },
+          { text: "Shadcn UI", slug: "shadcnui" },
+          { text: "Framer Motion", slug: "framer" },
+          { text: "Zod", slug: "zod" },
+          { text: "React Hook Form", slug: "reacthookform" },
         ],
         links: [
           {
@@ -216,13 +216,13 @@ export default {
         description:
           "Design and development of a web application for a bar, which has an ordering system integrated with Mercado Pago for payment processing. Includes email notifications, and an administrator panel to view payments and orders.",
         technologies: [
-          "Next.js",
-          "TypeScript",
-          "MongoDB",
-          "Prisma",
-          "TailwindCSS",
-          "Shadcn UI",
-          "MercadoPago",
+          { text: "Next.js", slug: "nextdotjs" },
+          { text: "TypeScript", slug: "typescript" },
+          { text: "MongoDB", slug: "mongodb" },
+          { text: "Prisma", slug: "prisma" },
+          { text: "TailwindCSS", slug: "tailwindcss" },
+          { text: "Shadcn UI", slug: "shadcnui" },
+          { text: "MercadoPago", slug: "mercadopago" },
         ],
         links: [
           {

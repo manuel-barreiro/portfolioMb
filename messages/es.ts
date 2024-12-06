@@ -113,13 +113,13 @@ const data: LanguageData = {
         description:
           "Desarrollo de landing page, sistema de pagos y reservas para estudio de pilates y yoga. Smooth scroll con librería Lenis, animaciones con Framer Motion y diseño responsive. Desarrollado con Next.js y TypeScript. Prisma ORM y PostgreSQL para la base de datos.",
         technologies: [
-          "Next.js",
-          "TypeScript",
-          "PostgreSQL",
-          "Prisma",
-          "TailwindCSS",
-          "MercadoPago",
-          "Shadcn UI",
+          { text: "Next.js", slug: "nextdotjs" },
+          { text: "TypeScript", slug: "typescript" },
+          { text: "PostgreSQL", slug: "postgresql" },
+          { text: "Prisma", slug: "prisma" },
+          { text: "TailwindCSS", slug: "tailwindcss" },
+          { text: "MercadoPago", slug: "mercadopago" },
+          { text: "Shadcn UI", slug: "shadcnui" },
         ],
         links: [
           {
@@ -145,13 +145,13 @@ const data: LanguageData = {
         description:
           "Diseño y desarrollo (Figma to code) de landing page corporativa y catálogo de productos. Desarrollado utilizando Next.js (App router), optimizado aprovechando el SSR (renderizado del lado del servidor).",
         technologies: [
-          "Next.js",
-          "Javascript",
-          "TailwindCSS",
-          "Figma",
-          "Framer Motion",
-          "Zod",
-          "React Hook Form",
+          { text: "Next.js", slug: "nextdotjs" },
+          { text: "Javascript", slug: "javascript" },
+          { text: "TailwindCSS", slug: "tailwindcss" },
+          { text: "Figma", slug: "figma" },
+          { text: "Framer Motion", slug: "framer" },
+          { text: "Zod", slug: "zod" },
+          { text: "React Hook Form", slug: "reacthookform" },
         ],
         links: [
           {
@@ -176,13 +176,13 @@ const data: LanguageData = {
         description:
           "DevaluApp te ayuda a calcular la apreciación o devaluación de tu salario en pesos en relación al valor del dólar estadounidense. Lo hace utilizando la API de Bluelytics. Desarrollado utilizando Next.js, con estilos realizados a través de Tailwind CSS.",
         technologies: [
-          "Next.js",
-          "TypeScript",
-          "TailwindCSS",
-          "Shadcn UI",
-          "Framer Motion",
-          "Zod",
-          "React Hook Form",
+          { text: "Next.js", slug: "nextdotjs" },
+          { text: "TypeScript", slug: "typescript" },
+          { text: "TailwindCSS", slug: "tailwindcss" },
+          { text: "Shadcn UI", slug: "shadcnui" },
+          { text: "Framer Motion", slug: "framer" },
+          { text: "Zod", slug: "zod" },
+          { text: "React Hook Form", slug: "reacthookform" },
         ],
         links: [
           {
@@ -208,13 +208,13 @@ const data: LanguageData = {
         description:
           "Diseño y desarrollo de una aplicación web para un bar, que cuenta con un sistema de pedidos integrado con Mercado Pago para el procesamiento de pagos. Incluye notificaciones por correo electrónico, y panel de administrador para visualizar pagos y órdenes.",
         technologies: [
-          "Next.js",
-          "TypeScript",
-          "MongoDB",
-          "Prisma",
-          "TailwindCSS",
-          "Shadcn UI",
-          "MercadoPago",
+          { text: "Next.js", slug: "nextdotjs" },
+          { text: "TypeScript", slug: "typescript" },
+          { text: "MongoDB", slug: "mongodb" },
+          { text: "Prisma", slug: "prisma" },
+          { text: "TailwindCSS", slug: "tailwindcss" },
+          { text: "Shadcn UI", slug: "shadcnui" },
+          { text: "MercadoPago", slug: "mercadopago" },
         ],
         links: [
           {

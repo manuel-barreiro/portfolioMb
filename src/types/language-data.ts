@@ -34,7 +34,10 @@ export type ProjectEntry = {
   dates: string
   active: boolean
   description: string
-  technologies: ReadonlyArray<string>
+  technologies: Array<{
+    text: string
+    slug: string
+  }>
   links: ReadonlyArray<Link>
   image?: string
   video?: string

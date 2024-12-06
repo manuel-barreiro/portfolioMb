@@ -22,6 +22,7 @@ const slugs = [
   "python",
   "figma",
   "framer",
+  "databricks",
   "tailwindcss",
   "shadcnui",
   "digitalocean",
@@ -36,6 +37,7 @@ const slugs = [
   "reacttable",
   "reacthookform",
   "zod",
+  "scikitlearn",
 ]
 
 export function IconCloudDemo() {

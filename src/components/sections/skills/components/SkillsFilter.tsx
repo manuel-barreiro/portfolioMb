@@ -1,50 +1,60 @@
 import BlurFade from "@/components/magicui/blur-fade"
-import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useTranslations } from "next-intl"
+import SkillTag from "@/components/sections/skills/components/SkillTag"
 
 const toolCategories = {
   frontend: [
-    "TypeScript",
-    "JavaScript",
-    "React",
-    "HTML",
-    "CSS",
-    "Next.js",
-    "Tanstack Query",
-    "Tanstack Table",
-    "React Hook Form",
-    "Zod",
-    "Zustand",
-    "Chakra UI",
-    "Tailwind CSS",
-    "Shadcn/ui",
-    "Framer Motion",
-    "Figma",
-    "Vite",
-    "Lenis",
+    { slug: "typescript", text: "TypeScript" },
+    { slug: "javascript", text: "JavaScript" },
+    { slug: "react", text: "React" },
+    { slug: "html5", text: "HTML" },
+    { slug: "css3", text: "CSS" },
+    { slug: "nextdotjs", text: "Next.js" },
+    { slug: "reactquery", text: "Tanstack Query" },
+    { slug: "reacttable", text: "Tanstack Table" },
+    { slug: "reacthookform", text: "React Hook Form" },
+    { slug: "zod", text: "Zod" },
+    { slug: "chakraui", text: "Chakra UI" },
+    { slug: "tailwindcss", text: "Tailwind CSS" },
+    { slug: "shadcnui", text: "Shadcn/ui" },
+    { slug: "framer", text: "Framer Motion" },
+    { slug: "figma", text: "Figma" },
+    { slug: "vite", text: "Vite" },
   ],
-  backend: ["Next.js", "Node.js", "Express.js", "Prisma", "Python"],
-  database: ["PostgreSQL", "MongoDB", "MySQL", "SQLite"],
+  backend: [
+    { slug: "nextdotjs", text: "Next.js" },
+    { slug: "nodedotjs", text: "Node.js" },
+    { slug: "express", text: "Express.js" },
+    { slug: "prisma", text: "Prisma" },
+    { slug: "python", text: "Python" },
+  ],
+  database: [
+    { slug: "postgresql", text: "PostgreSQL" },
+    { slug: "mongodb", text: "MongoDB" },
+    { slug: "mysql", text: "MySQL" },
+    { slug: "sqlite", text: "SQLite" },
+    { slug: "databricks", text: "Databricks" },
+  ],
   other: [
-    "Amazon AWS",
-    "Azure",
-    "Vercel",
-    "Docker",
-    "Resend",
-    "Upstash",
-    "Digital Ocean",
-    "Git",
-    "Github",
-    "VS Code",
-    "Cursor",
-    "Jira",
-    "Azure DevOps",
-    "Storybook",
-    "Streamlit",
-    "Pandas",
-    "Numpy",
-    "SKlearn",
+    { slug: "amazonaws", text: "Amazon AWS" },
+    { slug: "cloudflare", text: "Cloudflare" },
+    { slug: "vercel", text: "Vercel" },
+    { slug: "docker", text: "Docker" },
+    { slug: "resend", text: "Resend" },
+    { slug: "upstash", text: "Upstash" },
+    { slug: "digitalocean", text: "Digital Ocean" },
+    { slug: "git", text: "Git" },
+    { slug: "github", text: "Github" },
+    { slug: "visualstudiocode", text: "VS Code" },
+    { slug: "jira", text: "Jira" },
+    { slug: "azuredevops", text: "Azure DevOps" },
+    { slug: "storybook", text: "Storybook" },
+    { slug: "streamlit", text: "Streamlit" },
+    { slug: "pandas", text: "Pandas" },
+    { slug: "numpy", text: "Numpy" },
+    { slug: "scikitlearn", text: "SKlearn" },
+    { slug: "mercadopago", text: "MercadoPago" },
   ],
 }
 
@@ -70,11 +80,16 @@ export default function SkillsFilter({
       {Object.entries(toolCategories).map(([category, tools]) => (
         <TabsContent key={category} value={category} className="mt-4">
           <div className="flex flex-wrap justify-center gap-1">
-            {[...tools].sort().map((tool, id) => (
-              <BlurFade key={tool} delay={blurFadeDelay * 10 + id * 0.05}>
-                <Badge>{tool}</Badge>
-              </BlurFade>
-            ))}
+            {[...tools]
+              .sort((a, b) => a.text.localeCompare(b.text))
+              .map((tool, id) => (
+                <BlurFade
+                  key={tool.slug}
+                  delay={blurFadeDelay * 10 + id * 0.05}
+                >
+                  <SkillTag slug={tool.slug} text={tool.text} />
+                </BlurFade>
+              ))}
           </div>
         </TabsContent>
       ))}
