@@ -8,6 +8,7 @@ import Navbar from "@/components/navbar/navbar"
 import { NextIntlClientProvider } from "next-intl"
 import { getLocale, getMessages, getTranslations } from "next-intl/server"
 import { ToastProvider } from "@/components/custom-toast/ToastProvider"
+import { Analytics } from "@vercel/analytics/react"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -93,6 +94,7 @@ export default async function RootLayout({
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
+      <Analytics />
     </html>
   )
 }
