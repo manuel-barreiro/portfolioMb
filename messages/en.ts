@@ -14,7 +14,7 @@ export default {
   description:
     "Engineer & Software Developer. Creating practical tech solutions for tangible problems.",
   summary:
-    "With a background in **Industrial Engineering** and focus on *Business Intelligence*, I've successfully transitioned into software development. During university, I specialized in **data-driven decision making** and worked as a *Data Engineer*. My journey with data programming sparked a **natural passion for software development**, leading me to work as a *Software Engineer* at **Nestlé IT**, while maintaining freelance projects in my spare time.",
+    "With a background in **Industrial Engineering** and focus on *Business Intelligence*, I've successfully transitioned into software development. My journey with data programming sparked a **natural passion for software development**, leading me to work as a *Software Engineer* at **Nestlé IT**, while maintaining freelance projects in my spare time.",
   work: [
     {
       company: "Nestlé",

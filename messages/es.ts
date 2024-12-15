@@ -14,7 +14,7 @@ const data: LanguageData = {
   description:
     "Ingeniero & Developer. Creando soluciones tecnológicas para problemas tangibles.",
   summary:
-    "Con formación en **Ingeniería Industrial** y enfoque en *Business Intelligence*, transicioné al desarrollo de software. Durante la universidad, me especialicé en la **toma de decisiones basada en datos** y trabajé como *Data Engineer*. Mi trayectoria con la programación orientada a datos despertó en mí una **pasión por el desarrollo de software**, llevándome a trabajar como *Developer* en **Nestlé IT**, mientras mantengo proyectos **freelance** en mi tiempo libre.",
+    "Con formación en **Ingeniería Industrial** y enfoque en *Business Intelligence*, transicioné al desarrollo de software. Mi trayectoria con la programación orientada a datos despertó en mí una **pasión por el desarrollo de software**, llevándome a trabajar como *Developer* en **Nestlé IT**, mientras mantengo proyectos **freelance** en mi tiempo libre.",
   work: [
     {
       company: "Nestlé",
