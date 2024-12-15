@@ -11,6 +11,7 @@ export default getRequestConfig(async () => {
 
   // Use cookie if exists, otherwise check browser locale
   const locale = localeCookie?.value || "es"
+  // (browserLocale?.toLowerCase().startsWith("es") ? "es" : "en")
 
   return {
     locale,
