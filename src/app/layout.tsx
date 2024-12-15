@@ -9,6 +9,7 @@ import { NextIntlClientProvider } from "next-intl"
 import { getLocale, getMessages, getTranslations } from "next-intl/server"
 import { ToastProvider } from "@/components/custom-toast/ToastProvider"
 import { Analytics } from "@vercel/analytics/react"
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -16,7 +17,6 @@ const fontSans = FontSans({
 })
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale()
   const t = await getTranslations()
   return {
     metadataBase: new URL(t("url")),
@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: t("description"),
       url: t("url"),
       siteName: `${t("name")}`,
-      locale: locale,
+      locale: "es",
       type: "website",
     },
     robots: {
@@ -73,26 +73,27 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={cn(
-          "mx-auto min-h-screen max-w-2xl bg-background px-6 py-12 font-sans antialiased sm:py-24",
-          fontSans.variable
-        )}
+        className={cn("bg-background font-sans antialiased", fontSans.variable)}
       >
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <ToastProvider>
-              <TooltipProvider delayDuration={0}>
-                {children}
-                <Navbar />
-              </TooltipProvider>
-            </ToastProvider>
-          </ThemeProvider>
-        </NextIntlClientProvider>
+        <ScrollArea className="h-screen">
+          <div className="mx-auto max-w-2xl px-6 py-12 sm:py-24">
+            <NextIntlClientProvider messages={messages}>
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
+              >
+                <ToastProvider>
+                  <TooltipProvider delayDuration={0}>
+                    {children}
+                    <Navbar />
+                  </TooltipProvider>
+                </ToastProvider>
+              </ThemeProvider>
+            </NextIntlClientProvider>
+          </div>
+        </ScrollArea>
       </body>
       <Analytics />
     </html>
