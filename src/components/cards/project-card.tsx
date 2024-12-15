@@ -12,7 +12,8 @@ import Link from "next/link"
 import Markdown from "react-markdown"
 import { Icons } from "@/components/icons"
 import SkillTag from "../sections/skills/components/SkillTag"
-import { useRef, useEffect } from "react"
+import { useState } from "react"
+import { Skeleton } from "../ui/skeleton"
 
 interface Props {
   title: string
@@ -51,49 +52,42 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
-  const videoRef = useRef<HTMLVideoElement>(null)
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.load()
-    }
-  }, [])
+  const [isMediaLoaded, setIsMediaLoaded] = useState(false)
+
   return (
     <Card
       className={cn(
         "flex h-full flex-col overflow-hidden border shadow-lg transition-all duration-300 ease-out hover:shadow-xl",
-        // Light mode gradient - warm cream to slightly darker cream
         "bg-gradient-to-br from-white via-[hsl(60,30%,98%)] to-[hsl(60,30%,94%)]",
-        // Dark mode gradient - deep charcoal to slightly lighter charcoal
         "dark:from-[hsl(240,10%,10%)] dark:via-[hsl(240,10%,12%)] dark:to-[hsl(240,10%,15%)]"
       )}
     >
-      <Link
-        href={href || "#"}
-        target="_blank"
-        className={cn("block cursor-pointer", className)}
-      >
-        {video && (
-          <video
-            ref={videoRef}
-            src={video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="none"
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
-          />
-        )}
-        {image && (
+      <div className="relative h-40 w-full overflow-hidden rounded-lg">
+        {!isMediaLoaded && <Skeleton className="h-full w-full" />}
+        {image ? (
           <Image
             src={image}
+            width={400}
+            height={400}
             alt={title}
-            width={500}
-            height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
+            className="h-full w-full object-cover object-top"
+            onLoad={() => setIsMediaLoaded(true)}
           />
+        ) : (
+          video && (
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover object-top"
+              onLoadedData={() => setIsMediaLoaded(true)}
+            >
+              <source src={video} type="video/mp4" />
+            </video>
+          )
         )}
-      </Link>
+      </div>
       <CardHeader className="p-2">
         <div className="space-y-1">
           <CardTitle className="text-md mt-1">{title}</CardTitle>
