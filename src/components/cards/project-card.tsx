@@ -12,6 +12,7 @@ import Link from "next/link"
 import Markdown from "react-markdown"
 import { Icons } from "@/components/icons"
 import SkillTag from "../sections/skills/components/SkillTag"
+import { useRef, useEffect } from "react"
 
 interface Props {
   title: string
@@ -50,6 +51,12 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.load()
+    }
+  }, [])
   return (
     <Card
       className={cn(
@@ -67,13 +74,14 @@ export function ProjectCard({
       >
         {video && (
           <video
+            ref={videoRef}
             src={video}
             autoPlay
             loop
             muted
             playsInline
             preload="none"
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
           />
         )}
         {image && (
