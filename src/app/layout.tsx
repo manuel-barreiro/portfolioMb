@@ -9,6 +9,7 @@ import { NextIntlClientProvider } from "next-intl"
 import { getLocale, getMessages, getTranslations } from "next-intl/server"
 import { ToastProvider } from "@/components/custom-toast/ToastProvider"
 import { Analytics } from "@vercel/analytics/react"
+import { DynamicFavicon } from "@/components/DynamicFavicon"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -84,6 +85,7 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <DynamicFavicon />
             <ToastProvider>
               <TooltipProvider delayDuration={0}>
                 {children}
