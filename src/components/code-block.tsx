@@ -17,7 +17,9 @@ export default function CodeBlock({
   const t = useTranslations()
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText("industrial engineer who/codes")
+    navigator.clipboard.writeText(
+      '{"name": "manuel", "age": "24", "job": "developer", "skills": ["typescript", "next", "tailwindcss", "node", "express", "postgresql"], "location": "buenos aires, argentina", "email": "ing.mbarreiro@gmail.com", "phone": "+54 9 11 6672-6968"}'
+    )
     setCopied(true)
     setTimeout(() => setCopied(false), 20000)
   }

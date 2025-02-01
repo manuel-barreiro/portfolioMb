@@ -50,7 +50,7 @@ const SkillTag: FC<SkillTagProps> = ({ slug, text, className }) => {
     <Badge className={cn("flex items-center gap-2 px-2 py-2", className)}>
       {iconData && (
         <span className={cn("flex size-4 items-center")}>
-          {renderCustomIcon(iconData, theme || "light")}
+          {renderCustomIcon(iconData, theme || "dark")}
         </span>
       )}
       <span className="text-xs">{text}</span>

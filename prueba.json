@@ -1,0 +1,9 @@
+{
+  "name": "manuel",
+  "age": "24",
+  "job": "developer",
+  "skills": ["react", "next", "tailwind", "node", "express", "mongodb"],
+  "location": "buenos aires, argentina",
+  "email": "ing.mbarreiro@gmail.com",
+  "phone": "+54 9 11 6672-6968"
+}
