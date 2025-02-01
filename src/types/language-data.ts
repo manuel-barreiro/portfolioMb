@@ -130,7 +130,6 @@ export type LanguageData = {
     databases: string
   }
   terminal: {
-    eng: string
-    whoCodes: string
+    arr: string[]
   }
 }

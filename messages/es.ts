@@ -12,7 +12,7 @@ const data: LanguageData = {
   },
   greeting: "Hola, soy",
   description:
-    "Ingeniero & Developer. Creando soluciones tecnológicas para problemas tangibles.",
+    "Ingeniero & Desarrollador. Creando soluciones tecnológicas para problemas tangibles.",
   summary:
     "Con formación en **Ingeniería Industrial** y enfoque en *Business Intelligence*, transicioné al desarrollo de software. Mi trayectoria con la programación orientada a datos despertó en mí una **pasión por el desarrollo web**, llevándome a trabajar como *Developer* en **Nestlé IT**, mientras mantengo proyectos **freelance** en mi tiempo libre.",
   work: [
@@ -297,8 +297,11 @@ const data: LanguageData = {
     databases: "DBs",
   },
   terminal: {
-    eng: "ingeniero industrial",
-    whoCodes: "@que/programa",
+    arr: [
+      "programador && @ingeniero/industrial",
+      "ingeniero industrial && @developer",
+      "tech enthusiast :)",
+    ],
   },
 }
 

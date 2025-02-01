@@ -304,7 +304,10 @@ export default {
     databases: "DBs",
   },
   terminal: {
-    eng: "industrial engineer",
-    whoCodes: "@who/codes",
+    arr: [
+      "software developer && @industrial/engineer",
+      "industrial engineer @who/codes",
+      "tech enthusiast :)",
+    ],
   },
 } satisfies LanguageData

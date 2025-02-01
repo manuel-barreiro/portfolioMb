@@ -36,7 +36,7 @@ export default function CodeBlock({
             <span className="text-gray-200">
               <Typewriter
                 options={{
-                  strings: [`${t("terminal.eng")} ${t("terminal.whoCodes")}`],
+                  strings: t.raw("terminal.arr") as string[],
                   autoStart: true,
                   loop: true,
                 }}
