@@ -11,12 +11,18 @@ export default function Hero({ blurFadeDelay }: { blurFadeDelay: number }) {
       <div className="mx-auto w-full max-w-2xl space-y-8">
         <div className="flex justify-between gap-1 md:gap-2">
           <div className="flex flex-1 flex-col space-y-1.5">
-            <BlurFadeText
-              delay={blurFadeDelay}
-              className="text-xl font-bold tracking-tighter sm:!text-5xl xl:!text-5xl/none [@media(min-width:380px)]:text-2xl"
-              yOffset={8}
-              text={`${t("greeting")} ${t("name").split(" ")[0]} 👋🏽`}
-            />
+            <div className="flex items-center gap-2">
+              <BlurFadeText
+                delay={blurFadeDelay}
+                className="text-xl font-bold tracking-tighter sm:!text-5xl xl:!text-5xl/none [@media(min-width:380px)]:text-2xl"
+                text={`${t("greeting")} ${t("name").split(" ")[0]}`}
+              />
+              <BlurFadeText
+                delay={blurFadeDelay}
+                className="animate-wiggle animate-infinite animate-duration-[2000ms] animate-delay-1000 animate-ease-in-out mb-4 text-xl font-bold tracking-tighter sm:!text-5xl xl:!text-5xl/none [@media(min-width:380px)]:text-2xl"
+                text={`👋🏽`}
+              />
+            </div>
 
             <BlurFadeText
               className="prose max-w-[450px] text-pretty font-sans text-sm text-muted-foreground dark:prose-invert sm:text-lg"

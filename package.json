@@ -46,7 +46,7 @@
     "resend": "^4.0.1",
     "shiki": "^1.7.0",
     "tailwind-merge": "^2.5.5",
-    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-animated": "^2.0.0",
     "typewriter-effect": "^2.21.0",
     "unified": "^11.0.4",
     "zod": "^3.23.8"
