@@ -72,28 +72,30 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body
-        className={cn(
-          "mx-auto min-h-screen max-w-2xl bg-background px-6 py-12 font-sans antialiased sm:py-24",
-          fontSans.variable
-        )}
-      >
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <DynamicFavicon />
-            <ToastProvider>
-              <TooltipProvider delayDuration={0}>
-                {children}
-                <Navbar />
-              </TooltipProvider>
-            </ToastProvider>
-          </ThemeProvider>
-        </NextIntlClientProvider>
+      <body>
+        <div
+          className={cn(
+            "mx-auto min-h-screen max-w-2xl bg-background px-6 py-12 font-sans antialiased sm:py-24",
+            fontSans.variable
+          )}
+        >
+          <NextIntlClientProvider messages={messages}>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="dark"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <DynamicFavicon />
+              <ToastProvider>
+                <TooltipProvider delayDuration={0}>
+                  {children}
+                  <Navbar />
+                </TooltipProvider>
+              </ToastProvider>
+            </ThemeProvider>
+          </NextIntlClientProvider>
+        </div>
       </body>
       <Analytics />
     </html>

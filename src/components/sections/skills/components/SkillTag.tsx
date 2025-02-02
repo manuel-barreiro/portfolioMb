@@ -47,7 +47,12 @@ const SkillTag: FC<SkillTagProps> = ({ slug, text, className }) => {
   }, [slug])
 
   return (
-    <Badge className={cn("flex items-center gap-2 px-2 py-2", className)}>
+    <Badge
+      className={cn(
+        "flex cursor-default items-center gap-2 px-2 py-2",
+        className
+      )}
+    >
       {iconData && (
         <span className={cn("flex size-4 items-center")}>
           {renderCustomIcon(iconData, theme || "dark")}
