@@ -119,7 +119,7 @@ export default {
         dates: "",
         active: true,
         description:
-          "Development of landing page, payment system and booking system for pilates and yoga studio. Smooth scroll with Lenis library, animations with Framer Motion and responsive design. Developed with Next.js and TypeScript. Prisma ORM and PostgreSQL for the database.",
+          "Landing page, payment and booking system for pilates & yoga studio. Smooth scroll with Lenis library, animations with Framer Motion. Developed with Next.js and TypeScript. Prisma and PostgreSQL for the database.",
         technologies: [
           { text: "Next.js", slug: "nextdotjs" },
           { text: "TypeScript", slug: "typescript" },

@@ -14,7 +14,13 @@ import { Icons } from "@/components/icons"
 import SkillTag from "@/components/sections/skills/components/SkillTag"
 import { useState } from "react"
 import { Skeleton } from "@/components/ui/skeleton"
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 import { Fullscreen } from "lucide-react"
 import { Button } from "../ui/button"
 
@@ -55,7 +61,7 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
-  const [isMediaLoaded, setIsMediaLoaded] = useState(true)
+  const [isMediaLoaded, setIsMediaLoaded] = useState(false)
   const [isVideoDialogOpen, setIsVideoDialogOpen] = useState(false)
 
   return (
@@ -70,24 +76,69 @@ export function ProjectCard({
       <div className="relative aspect-video h-40 w-full overflow-hidden rounded-lg">
         {!isMediaLoaded && <Skeleton className="h-full w-full" />}
         {image ? (
-          <Image
-            src={image}
-            width={400}
-            height={400}
-            alt={title}
-            className={cn(
-              "h-full w-full object-cover object-top transition-transform duration-300",
-              "group-hover:scale-105",
-              !isMediaLoaded && "opacity-0"
-            )}
-            onLoad={() => setIsMediaLoaded(true)}
-          />
+          <Dialog open={isVideoDialogOpen} onOpenChange={setIsVideoDialogOpen}>
+            <DialogDescription className="sr-only">{title}</DialogDescription>
+            <DialogTitle className="sr-only">{title}</DialogTitle>
+            <div className="relative h-full w-full">
+              <Image
+                src={image}
+                width={400}
+                height={400}
+                alt={title}
+                className={cn(
+                  "h-full w-full object-cover object-top transition-transform duration-300",
+                  "group-hover:scale-105"
+                )}
+                onLoad={() => setIsMediaLoaded(true)}
+              />
+
+              {isMediaLoaded && (
+                <DialogTrigger asChild>
+                  <Button
+                    aria-label="View full video"
+                    className={cn(
+                      "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2",
+                      "flex items-center gap-2 rounded-full bg-background/90 px-4 py-2",
+                      "text-sm font-medium text-foreground shadow-lg",
+                      "opacity-0 transition-all duration-300 group-hover:opacity-100",
+                      "hover:scale-105 hover:bg-background"
+                    )}
+                  >
+                    <Fullscreen className="size-4" />
+                    <span>Fullscreen</span>
+                  </Button>
+                </DialogTrigger>
+              )}
+            </div>
+
+            <DialogContent
+              className="max-w-4xl rounded-lg p-0"
+              aria-label={`Video preview of ${title}`}
+            >
+              <div className="p-4">
+                <Image
+                  src={image}
+                  width={400}
+                  height={400}
+                  alt={title}
+                  className={cn(
+                    "h-full w-full object-cover object-top transition-transform duration-300",
+                    "group-hover:scale-105"
+                  )}
+                  onLoad={() => setIsMediaLoaded(true)}
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
         ) : (
           video && (
             <Dialog
               open={isVideoDialogOpen}
               onOpenChange={setIsVideoDialogOpen}
             >
+              <DialogDescription className="sr-only">{title}</DialogDescription>
+              <DialogTitle className="sr-only">{title}</DialogTitle>
+
               <div className="relative h-full w-full">
                 <video
                   autoPlay
