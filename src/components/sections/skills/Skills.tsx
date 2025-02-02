@@ -7,7 +7,7 @@ export default function Skills({ blurFadeDelay }: { blurFadeDelay: number }) {
   return (
     <section
       id="skills"
-      className="flex min-h-[100vh] w-full flex-col pb-56 md:py-32"
+      className="flex h-[100vh] w-full flex-col pb-56 md:py-32"
     >
       <div className="relative grid w-full items-center justify-center gap-4 px-4 py-32 text-center md:px-6">
         <SkillsHeader blurFadeDelay={blurFadeDelay} />
