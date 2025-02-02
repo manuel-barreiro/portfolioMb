@@ -1,4 +1,3 @@
-"use client"
 import IconCloud from "@/components/magicui/icon-cloud"
 
 const slugs = [
@@ -43,7 +42,7 @@ const slugs = [
 
 export function IconCloudDemo() {
   return (
-    <div className="absolute inset-0 -z-10 flex items-center justify-center overflow-hidden rounded-lg pb-20 pt-8 opacity-25 lg:px-0">
+    <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-lg opacity-25 lg:px-0">
       <IconCloud iconSlugs={slugs} />
     </div>
   )

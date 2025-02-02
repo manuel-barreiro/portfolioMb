@@ -22,7 +22,7 @@ export default function Projects({ blurFadeDelay }: { blurFadeDelay: number }) {
   }, [isInView, isLoaded])
 
   return (
-    <section id="projects" className="md:py-48" ref={sectionRef}>
+    <section id="projects" className="sm:py-32" ref={sectionRef}>
       <div className="w-full space-y-12">
         <BlurFade delay={blurFadeDelay * 11}>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
