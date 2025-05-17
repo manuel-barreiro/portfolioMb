@@ -404,7 +404,7 @@ export default {
   },
   terminal: {
     arr: [
-      "software developer && @industrial/engineer",
+      "software developer && @engineer",
       "industrial engineer @who/codes",
       "tech enthusiast :)",
     ],
