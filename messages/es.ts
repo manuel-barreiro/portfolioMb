@@ -29,6 +29,17 @@ const data: LanguageData = {
         "Liderando el desarrollo y mantenimiento de aplicaciones de la empresa. Colaboré con el equipo de diseño para crear interfaces y experiencias de usuario atractivas. Aseguré la calidad del código e implementé las mejores prácticas en los proyectos.",
     },
     {
+      company: "FlashPass",
+      href: "https://events.flashpass.com.ar/",
+      badges: [],
+      location: "Remoto",
+      title: "Software Engineer",
+      logoUrl: "/flash.png",
+      start: "mar 2025",
+      end: "presente",
+      description: "",
+    },
+    {
       company: "Freelance",
       href: "",
       badges: [],
@@ -42,7 +53,7 @@ const data: LanguageData = {
     },
     {
       company: "We Plan LATAM",
-      href: "https://weplan.com",
+      href: "https://weplan-latam.com/",
       badges: [],
       location: "Remoto",
       title: "Data Engineer",
@@ -87,6 +98,14 @@ const data: LanguageData = {
       end: "2023",
     },
     {
+      school: "International Baccalaureate",
+      href: "https://ibo.org",
+      degree: "IB Diploma",
+      logoUrl: "/logo-ib.webp",
+      start: "",
+      end: "",
+    },
+    {
       school: "St. Matthew's College",
       href: "https://www.smc.edu.ar/",
       degree: "Bachillerato Bilingüe | Economía y Administración",
@@ -105,6 +124,52 @@ const data: LanguageData = {
     description:
       "He desarrollado diversos proyectos, desde sitios web sencillos hasta aplicaciones web complejas. Acá te presento algunos de mis favoritos.",
     recent: [
+      {
+        title: "FlashPass Studio",
+        href: "https://events.flashpass.com.ar/",
+        dates: "",
+        active: true,
+        description:
+          "La solución todo en uno para la gestión de eventos. Vende entradas online, valida accesos con QR, procesa pagos en barra y coordina tu equipo, todo desde un solo sistema, sin efectivo y sin complicaciones.",
+        technologies: [
+          { text: "Next.js", slug: "nextdotjs" },
+          { text: "TypeScript", slug: "typescript" },
+          { text: "TailwindCSS", slug: "tailwindcss" },
+          { text: "Shadcn UI", slug: "shadcnui" },
+          { text: "MercadoPago", slug: "mercadopago" },
+          { text: "Tanstack Query", slug: "reactquery" },
+          { text: "Tanstack Table", slug: "reacttable" },
+        ],
+        links: [
+          {
+            type: "Website",
+            href: "https://events.flashpass.com.ar/",
+            icon: "globe",
+          },
+        ],
+        image: "",
+        video: "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/flash.mp4",
+      },
+      {
+        title: "Nestlé MARVIN CPFR",
+        href: "",
+        dates: "",
+        active: true,
+        description:
+          "Desarrollo de una herramienta de colaboración para la gestión de la demanda y el abastecimiento para Nestlé Supply Chain Mexico. Permite a los usuarios colaborar en la planificación de la demanda y el abastecimiento, mejorando la eficiencia y reduciendo costos.",
+        technologies: [
+          { text: "Next.js", slug: "nextdotjs" },
+          { text: "TypeScript", slug: "typescript" },
+          { text: "Databricks", slug: "databricks" },
+          { text: "TailwindCSS", slug: "tailwindcss" },
+          { text: "Shadcn UI", slug: "shadcnui" },
+          { text: "Tanstack Query", slug: "reactquery" },
+          { text: "Tanstack Table", slug: "reacttable" },
+        ],
+        image: "",
+        video: "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/marvin.mp4",
+      },
+
       {
         title: "Reformer Club",
         href: "https://reformer.com.ar",
@@ -127,15 +192,88 @@ const data: LanguageData = {
             href: "https://reformer.com.ar",
             icon: "globe",
           },
-          {
-            type: "Source",
-            href: "https://github.com/manuel-barreiro/reformer",
-            icon: "github",
-          },
         ],
         image: "",
         video:
           "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/reformer.mp4",
+      },
+      {
+        title: "Holding Families",
+        href: "https://holding-families.com/",
+        dates: "",
+        active: true,
+        description:
+          "Desarrollo de landing page para Holding Families, una organización dedicada a transformar la crianza combinando ciencia, tecnología y calidez humana. Implementé una web que comunica su enfoque en estrategias basadas en evidencia para optimizar la gestión emocional de niños y familias. Internacionalización de la web para su uso en inglés y español.",
+        technologies: [
+          { text: "Next.js", slug: "nextdotjs" },
+          { text: "TypeScript", slug: "typescript" },
+          { text: "TailwindCSS", slug: "tailwindcss" },
+          { text: "Shadcn UI", slug: "shadcnui" },
+          { text: "Framer Motion", slug: "framer" },
+        ],
+        links: [
+          {
+            type: "Website",
+            href: "https://holding-families.com/",
+            icon: "globe",
+          },
+        ],
+        image: "",
+        video:
+          "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/holding.mp4",
+      },
+      {
+        title: "Wedding RSVP System",
+        href: "https://www.loischnovios.com/",
+        dates: "",
+        active: true,
+        description:
+          "Desarrollo de un sistema de RSVP para casamiento. Permite a los invitados confirmar su asistencia y seleccionar sus preferencias de comida. Incluye animaciones suaves y un diseño responsivo. Integración con Google Sheets para la gestión de datos.",
+        technologies: [
+          { text: "Next.js", slug: "nextdotjs" },
+          { text: "TypeScript", slug: "typescript" },
+          { text: "TailwindCSS", slug: "tailwindcss" },
+          { text: "Shadcn UI", slug: "shadcnui" },
+          { text: "Google Sheets", slug: "googlesheets" },
+          { text: "Zod", slug: "zod" },
+          { text: "React Hook Form", slug: "reacthookform" },
+        ],
+        links: [
+          {
+            type: "Website",
+            href: "https://www.loischnovios.com/",
+            icon: "globe",
+          },
+        ],
+        image: "",
+        video:
+          "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/wedding.mp4",
+      },
+      {
+        title: "Clic Pilates",
+        href: "https://www.clicpilates.com/",
+        dates: "",
+        active: true,
+        description:
+          "Landing page development for Clic Pilates, a pilates studio in Buenos Aires. The website features a modern design and is fully responsive, ensuring a seamless experience across all devices.",
+        technologies: [
+          { text: "Next.js", slug: "nextdotjs" },
+          { text: "Javascript", slug: "javascript" },
+          { text: "TailwindCSS", slug: "tailwindcss" },
+          { text: "Figma", slug: "figma" },
+          { text: "Framer Motion", slug: "framer" },
+          { text: "Zod", slug: "zod" },
+          { text: "React Hook Form", slug: "reacthookform" },
+        ],
+        links: [
+          {
+            type: "Website",
+            href: "https://www.clicpilates.com/",
+            icon: "globe",
+          },
+        ],
+        image: "",
+        video: "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/clic.mp4",
       },
       {
         title: "Power Consultant",
@@ -199,36 +337,6 @@ const data: LanguageData = {
         image: "",
         video:
           "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/devaluapp.mp4",
-      },
-      {
-        title: "ShortCut",
-        href: "https://shortcut-nigeria.vercel.app/",
-        dates: "",
-        active: true,
-        description:
-          "Diseño y desarrollo de una aplicación web para un bar, que cuenta con un sistema de pedidos integrado con Mercado Pago para el procesamiento de pagos. Incluye notificaciones por correo electrónico, y panel de administrador para visualizar pagos y órdenes.",
-        technologies: [
-          { text: "Next.js", slug: "nextdotjs" },
-          { text: "TypeScript", slug: "typescript" },
-          { text: "MongoDB", slug: "mongodb" },
-          { text: "Prisma", slug: "prisma" },
-          { text: "TailwindCSS", slug: "tailwindcss" },
-          { text: "Shadcn UI", slug: "shadcnui" },
-          { text: "MercadoPago", slug: "mercadopago" },
-        ],
-        links: [
-          {
-            type: "Website",
-            href: "https://shortcut-nigeria.vercel.app/",
-            icon: "globe",
-          },
-          {
-            type: "Source",
-            href: "https://github.com/manuel-barreiro/inTime",
-            icon: "github",
-          },
-        ],
-        image: "/shortcut.webp",
       },
     ],
   },

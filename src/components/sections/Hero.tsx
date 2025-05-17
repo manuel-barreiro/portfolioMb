@@ -19,7 +19,7 @@ export default function Hero({ blurFadeDelay }: { blurFadeDelay: number }) {
               />
               <BlurFadeText
                 delay={blurFadeDelay}
-                className="animate-wiggle animate-infinite animate-duration-[2000ms] animate-delay-1000 animate-ease-in-out mb-4 text-xl font-bold tracking-tighter sm:!text-5xl xl:!text-5xl/none [@media(min-width:380px)]:text-2xl"
+                className="mb-4 animate-wiggle text-xl font-bold tracking-tighter animate-delay-1000 animate-duration-[2000ms] animate-infinite animate-ease-in-out sm:!text-5xl xl:!text-5xl/none [@media(min-width:380px)]:text-2xl"
                 text={`👋🏽`}
               />
             </div>
@@ -32,7 +32,7 @@ export default function Hero({ blurFadeDelay }: { blurFadeDelay: number }) {
           </div>
           <BlurFade delay={blurFadeDelay}>
             <Avatar className="size-28 border lg:size-32">
-              <AvatarImage alt={t("name")} src={"/profile2.webp"} />
+              <AvatarImage alt={t("name")} src={"/profile.webp"} />
               <AvatarFallback>{t("initials")}</AvatarFallback>
             </Avatar>
           </BlurFade>

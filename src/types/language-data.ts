@@ -38,7 +38,7 @@ export type ProjectEntry = {
     text: string
     slug: string
   }>
-  links: ReadonlyArray<Link>
+  links?: ReadonlyArray<Link>
   image?: string
   video?: string
 }
