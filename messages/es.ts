@@ -28,17 +28,17 @@ const data: LanguageData = {
       description:
         "Liderando el desarrollo y mantenimiento de aplicaciones de la empresa. Colaboré con el equipo de diseño para crear interfaces y experiencias de usuario atractivas. Aseguré la calidad del código e implementé las mejores prácticas en los proyectos.",
     },
-    {
-      company: "FlashPass",
-      href: "https://events.flashpass.com.ar/",
-      badges: [],
-      location: "Remoto",
-      title: "Software Engineer",
-      logoUrl: "/flash.png",
-      start: "mar 2025",
-      end: "presente",
-      description: "",
-    },
+    // {
+    //   company: "FlashPass",
+    //   href: "https://events.flashpass.com.ar/",
+    //   badges: [],
+    //   location: "Remoto",
+    //   title: "Software Engineer",
+    //   logoUrl: "/flash.png",
+    //   start: "mar 2025",
+    //   end: "presente",
+    //   description: "",
+    // },
     {
       company: "Freelance",
       href: "",
@@ -150,25 +150,25 @@ const data: LanguageData = {
         image: "",
         video: "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/flash.mp4",
       },
-      {
-        title: "Nestlé MARVIN CPFR",
-        href: "",
-        dates: "",
-        active: true,
-        description:
-          "Desarrollo de una herramienta de colaboración para la gestión de la demanda y el abastecimiento para Nestlé Supply Chain Mexico. Permite a los usuarios colaborar en la planificación de la demanda y el abastecimiento, mejorando la eficiencia y reduciendo costos.",
-        technologies: [
-          { text: "Next.js", slug: "nextdotjs" },
-          { text: "TypeScript", slug: "typescript" },
-          { text: "Databricks", slug: "databricks" },
-          { text: "TailwindCSS", slug: "tailwindcss" },
-          { text: "Shadcn UI", slug: "shadcnui" },
-          { text: "Tanstack Query", slug: "reactquery" },
-          { text: "Tanstack Table", slug: "reacttable" },
-        ],
-        image: "",
-        video: "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/marvin.mp4",
-      },
+      // {
+      //   title: "Nestlé MARVIN CPFR",
+      //   href: "",
+      //   dates: "",
+      //   active: true,
+      //   description:
+      //     "Desarrollo de una herramienta de colaboración para la gestión de la demanda y el abastecimiento para Nestlé Supply Chain Mexico. Permite a los usuarios colaborar en la planificación de la demanda y el abastecimiento, mejorando la eficiencia y reduciendo costos.",
+      //   technologies: [
+      //     { text: "Next.js", slug: "nextdotjs" },
+      //     { text: "TypeScript", slug: "typescript" },
+      //     { text: "Databricks", slug: "databricks" },
+      //     { text: "TailwindCSS", slug: "tailwindcss" },
+      //     { text: "Shadcn UI", slug: "shadcnui" },
+      //     { text: "Tanstack Query", slug: "reactquery" },
+      //     { text: "Tanstack Table", slug: "reacttable" },
+      //   ],
+      //   image: "",
+      //   video: "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/marvin.mp4",
+      // },
 
       {
         title: "Reformer Club",
@@ -306,38 +306,38 @@ const data: LanguageData = {
         image: "",
         video: "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/power.mp4",
       },
-      {
-        title: "DevaluApp",
-        href: "https://devaluapp.vercel.app/",
-        dates: "",
-        active: true,
-        description:
-          "DevaluApp te ayuda a calcular la apreciación o devaluación de tu salario en pesos en relación al valor del dólar estadounidense. Lo hace utilizando la API de Bluelytics. Desarrollado utilizando Next.js, con estilos realizados a través de Tailwind CSS.",
-        technologies: [
-          { text: "Next.js", slug: "nextdotjs" },
-          { text: "TypeScript", slug: "typescript" },
-          { text: "TailwindCSS", slug: "tailwindcss" },
-          { text: "Shadcn UI", slug: "shadcnui" },
-          { text: "Framer Motion", slug: "framer" },
-          { text: "Zod", slug: "zod" },
-          { text: "React Hook Form", slug: "reacthookform" },
-        ],
-        links: [
-          {
-            type: "Website",
-            href: "https://devaluapp.vercel.app/",
-            icon: "globe",
-          },
-          {
-            type: "Source",
-            href: "https://github.com/manuel-barreiro/devaluapp",
-            icon: "github",
-          },
-        ],
-        image: "",
-        video:
-          "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/devaluapp.mp4",
-      },
+      // {
+      //   title: "DevaluApp",
+      //   href: "https://devaluapp.vercel.app/",
+      //   dates: "",
+      //   active: true,
+      //   description:
+      //     "DevaluApp te ayuda a calcular la apreciación o devaluación de tu salario en pesos en relación al valor del dólar estadounidense. Lo hace utilizando la API de Bluelytics. Desarrollado utilizando Next.js, con estilos realizados a través de Tailwind CSS.",
+      //   technologies: [
+      //     { text: "Next.js", slug: "nextdotjs" },
+      //     { text: "TypeScript", slug: "typescript" },
+      //     { text: "TailwindCSS", slug: "tailwindcss" },
+      //     { text: "Shadcn UI", slug: "shadcnui" },
+      //     { text: "Framer Motion", slug: "framer" },
+      //     { text: "Zod", slug: "zod" },
+      //     { text: "React Hook Form", slug: "reacthookform" },
+      //   ],
+      //   links: [
+      //     {
+      //       type: "Website",
+      //       href: "https://devaluapp.vercel.app/",
+      //       icon: "globe",
+      //     },
+      //     {
+      //       type: "Source",
+      //       href: "https://github.com/manuel-barreiro/devaluapp",
+      //       icon: "github",
+      //     },
+      //   ],
+      //   image: "",
+      //   video:
+      //     "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/devaluapp.mp4",
+      // },
     ],
   },
   contact: {

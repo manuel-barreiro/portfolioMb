@@ -28,17 +28,17 @@ export default {
       description:
         "Leading development and maintenance of company applications. Collaborated with design team to create engaging UIs and UXs. Ensured code quality and implemented best practices across projects.",
     },
-    {
-      company: "FlashPass",
-      href: "https://events.flashpass.com.ar/",
-      badges: [],
-      location: "Remote",
-      title: "Software Engineer",
-      logoUrl: "/flash.png",
-      start: "mar 2025",
-      end: "present",
-      description: "",
-    },
+    // {
+    //   company: "FlashPass",
+    //   href: "https://events.flashpass.com.ar/",
+    //   badges: [],
+    //   location: "Remote",
+    //   title: "Software Engineer",
+    //   logoUrl: "/flash.png",
+    //   start: "mar 2025",
+    //   end: "present",
+    //   description: "",
+    // },
     {
       company: "Freelance",
       href: "",
@@ -150,25 +150,25 @@ export default {
         image: "",
         video: "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/flash.mp4",
       },
-      {
-        title: "Nestlé MARVIN CPFR",
-        href: "",
-        dates: "",
-        active: true,
-        description:
-          "Development of a collaboration tool for demand and supply management for Nestlé Supply Chain Mexico. Allows users to collaborate in demand and supply planning, improving efficiency and reducing costs.",
-        technologies: [
-          { text: "Next.js", slug: "nextdotjs" },
-          { text: "TypeScript", slug: "typescript" },
-          { text: "Databricks", slug: "databricks" },
-          { text: "TailwindCSS", slug: "tailwindcss" },
-          { text: "Shadcn UI", slug: "shadcnui" },
-          { text: "Tanstack Query", slug: "reactquery" },
-          { text: "Tanstack Table", slug: "reacttable" },
-        ],
-        image: "",
-        video: "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/marvin.mp4",
-      },
+      // {
+      //   title: "Nestlé MARVIN CPFR",
+      //   href: "",
+      //   dates: "",
+      //   active: true,
+      //   description:
+      //     "Development of a collaboration tool for demand and supply management for Nestlé Supply Chain Mexico. Allows users to collaborate in demand and supply planning, improving efficiency and reducing costs.",
+      //   technologies: [
+      //     { text: "Next.js", slug: "nextdotjs" },
+      //     { text: "TypeScript", slug: "typescript" },
+      //     { text: "Databricks", slug: "databricks" },
+      //     { text: "TailwindCSS", slug: "tailwindcss" },
+      //     { text: "Shadcn UI", slug: "shadcnui" },
+      //     { text: "Tanstack Query", slug: "reactquery" },
+      //     { text: "Tanstack Table", slug: "reacttable" },
+      //   ],
+      //   image: "",
+      //   video: "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/marvin.mp4",
+      // },
       {
         title: "Reformer Club",
         href: "https://reformer.com.ar",
@@ -305,38 +305,38 @@ export default {
         image: "",
         video: "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/power.mp4",
       },
-      {
-        title: "DevaluApp",
-        href: "https://devaluapp.vercel.app/",
-        dates: "",
-        active: true,
-        description:
-          "DevaluApp helps you calculate the appreciation or devaluation of your salary in ARS in relation to the value of the US dollar. It does this using the Bluelytics API. Developed using Next.js, with styles done through Tailwind CSS.",
-        technologies: [
-          { text: "Next.js", slug: "nextdotjs" },
-          { text: "TypeScript", slug: "typescript" },
-          { text: "TailwindCSS", slug: "tailwindcss" },
-          { text: "Shadcn UI", slug: "shadcnui" },
-          { text: "Framer Motion", slug: "framer" },
-          { text: "Zod", slug: "zod" },
-          { text: "React Hook Form", slug: "reacthookform" },
-        ],
-        links: [
-          {
-            type: "Website",
-            href: "https://devaluapp.vercel.app/",
-            icon: "globe",
-          },
-          {
-            type: "Source",
-            href: "https://github.com/manuel-barreiro/devaluapp",
-            icon: "github",
-          },
-        ],
-        image: "",
-        video:
-          "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/devaluapp.mp4",
-      },
+      // {
+      //   title: "DevaluApp",
+      //   href: "https://devaluapp.vercel.app/",
+      //   dates: "",
+      //   active: true,
+      //   description:
+      //     "DevaluApp helps you calculate the appreciation or devaluation of your salary in ARS in relation to the value of the US dollar. It does this using the Bluelytics API. Developed using Next.js, with styles done through Tailwind CSS.",
+      //   technologies: [
+      //     { text: "Next.js", slug: "nextdotjs" },
+      //     { text: "TypeScript", slug: "typescript" },
+      //     { text: "TailwindCSS", slug: "tailwindcss" },
+      //     { text: "Shadcn UI", slug: "shadcnui" },
+      //     { text: "Framer Motion", slug: "framer" },
+      //     { text: "Zod", slug: "zod" },
+      //     { text: "React Hook Form", slug: "reacthookform" },
+      //   ],
+      //   links: [
+      //     {
+      //       type: "Website",
+      //       href: "https://devaluapp.vercel.app/",
+      //       icon: "globe",
+      //     },
+      //     {
+      //       type: "Source",
+      //       href: "https://github.com/manuel-barreiro/devaluapp",
+      //       icon: "github",
+      //     },
+      //   ],
+      //   image: "",
+      //   video:
+      //     "https://pub-5d52b00d532e4652b151cf24d2f2682d.r2.dev/devaluapp.mp4",
+      // },
     ],
   },
   contact: {
