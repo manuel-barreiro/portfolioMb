@@ -22,12 +22,12 @@ const navBarConfig = {
       icon: Icons.whatsapp,
       navbar: true,
     },
-    Instagram: {
-      name: "Instagram",
-      url: "https://www.instagram.com/mbarreiro.dev", // Replace with your Instagram URL
-      icon: Icons.instagram,
-      navbar: true,
-    },
+    // Instagram: {
+    //   name: "Instagram",
+    //   url: "https://www.instagram.com/mbarreiro.dev", // Replace with your Instagram URL
+    //   icon: Icons.instagram,
+    //   navbar: true,
+    // },
   },
 }
 

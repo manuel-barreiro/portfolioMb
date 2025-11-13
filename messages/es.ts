@@ -14,8 +14,20 @@ const data: LanguageData = {
   description:
     "Ingeniero & Desarrollador. Creando soluciones tecnológicas para problemas tangibles.",
   summary:
-    "Con formación en **Ingeniería Industrial** y enfoque en *Business Intelligence*, transicioné al desarrollo de software. Mi trayectoria con la programación orientada a datos despertó en mí una **pasión por el desarrollo web**, llevándome a trabajar como *Developer* en **Nestlé IT**, mientras mantengo proyectos **freelance** en mi tiempo libre.",
+    "Con formación en **Ingeniería Industrial** y enfoque en *Business Intelligence*, he desarrollado una **doble pasión por la programación y el análisis de datos**. Mi trayectoria me ha llevado a través del desarrollo de software en **Nestlé IT** y actualmente al análisis de prevención de fraude en **Mercado Libre**, combinando mi experiencia en código y datos para resolver problemas complejos, mientras mantengo proyectos **freelance** en mi tiempo libre.",
   work: [
+    {
+      company: "Mercado Libre",
+      href: "https://www.mercadolibre.com.ar/",
+      badges: [],
+      location: "Híbrido",
+      title: "Data Analyst - Fraud Prevention",
+      logoUrl: "/meli.png",
+      start: "ago 2025",
+      end: "presente",
+      description:
+        "Analizando datos a gran escala para detectar y prevenir fraude en operaciones de envío. Desarrollando modelos analíticos y soluciones basadas en datos para identificar patrones sospechosos. Colaborando con equipos multifuncionales para implementar medidas de seguridad y optimizar sistemas de detección de fraude.",
+    },
     {
       company: "Nestlé",
       href: "https://www.nestle.com/",
@@ -24,7 +36,7 @@ const data: LanguageData = {
       title: "Software Engineer",
       logoUrl: "/nestle.png",
       start: "jun 2024",
-      end: "presente",
+      end: "jul 2025",
       description:
         "Liderando el desarrollo y mantenimiento de aplicaciones de la empresa. Colaboré con el equipo de diseño para crear interfaces y experiencias de usuario atractivas. Aseguré la calidad del código e implementé las mejores prácticas en los proyectos.",
     },

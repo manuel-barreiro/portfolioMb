@@ -14,8 +14,20 @@ export default {
   description:
     "Engineer & Software Developer. Creating practical tech solutions for tangible problems.",
   summary:
-    "With a background in **Industrial Engineering** and focus on *Business Intelligence*, I've successfully transitioned into **Software Engineering**. My journey with data programming sparked a **natural passion for software development**, leading me to work as a *Software Engineer* at **Nestlé IT**, while maintaining freelance projects in my spare time.",
+    "With a background in **Industrial Engineering** and focus on *Business Intelligence*, I've developed a **dual passion for programming and data analytics**. My journey has led me through software development at **Nestlé IT** and currently to fraud prevention analytics at **Mercado Libre**, combining my expertise in both code and data to solve complex problems, while maintaining freelance projects in my spare time.",
   work: [
+    {
+      company: "Mercado Libre",
+      href: "https://www.mercadolibre.com.ar/",
+      badges: [],
+      location: "Hybrid",
+      title: "Data Analyst - Fraud Prevention",
+      logoUrl: "/meli.png",
+      start: "aug 2025",
+      end: "present",
+      description:
+        "Analyzing large-scale data to detect and prevent fraud in shipping operations. Developing analytical models and data-driven solutions to identify suspicious patterns. Collaborating with cross-functional teams to implement security measures and optimize fraud detection systems.",
+    },
     {
       company: "Nestlé",
       href: "https://www.nestle.com/",
@@ -24,7 +36,7 @@ export default {
       title: "Software Engineer",
       logoUrl: "/nestle.png",
       start: "jun 2024",
-      end: "present",
+      end: "jul 2025",
       description:
         "Leading development and maintenance of company applications. Collaborated with design team to create engaging UIs and UXs. Ensured code quality and implemented best practices across projects.",
     },
